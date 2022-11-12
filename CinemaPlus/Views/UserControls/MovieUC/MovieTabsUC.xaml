@@ -1,0 +1,78 @@
+﻿<UserControl x:Class="CinemaPlus.ViewModels.MovieViewModels.MovieTabsUC"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:CinemaPlus.ViewModels.MovieViewModels" xmlns:movieuc="clr-namespace:CinemaPlus.Views.UserControls.MovieUC"
+             mc:Ignorable="d" 
+             Height="873"
+             Width="1500"
+             d:DesignHeight="873" 
+             d:DesignWidth="1500"
+             Background="{DynamicResource firstColor}"
+             VerticalAlignment="Top"
+             Focusable="True"
+             HorizontalAlignment="Center">
+    <UserControl.InputBindings>
+        <KeyBinding Command="{Binding BackCommand}" Modifiers="Control" Key="Z"/>
+    </UserControl.InputBindings>
+    <Grid>
+        <StackPanel Orientation="Vertical">
+            <StackPanel Orientation="Horizontal"
+                        HorizontalAlignment="Center" 
+                        VerticalAlignment="Top"
+                        Margin="0,55,0,0">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="200"></ColumnDefinition>
+                        <ColumnDefinition Width="1300"></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+
+                    <Grid Grid.Column="0">
+                        <Border BorderBrush="{DynamicResource secondColor}"
+                                BorderThickness="0,0,0,2">
+                            <StackPanel Orientation="Horizontal"
+                                    Margin="0,0,20,0">
+                                <Button Height="56"
+                                    Width="60"
+                                    Name="BackButton"
+                                    Command="{Binding BackCommand}"
+                                    Background="Transparent" 
+                                    Style="{StaticResource MyButtonStyle1}"
+                                    Margin="0" >
+                                    <Image Source="\Images\backButton.png" 
+                                       Width="52">
+                                    </Image>
+                                </Button>
+                                <Label FontSize="30"
+                                   Foreground="{StaticResource seventhColor}" 
+                                   Width="125" 
+                                   Height="56"
+                                   Cursor="Arrow">
+                                    Back
+                                </Label>
+                            </StackPanel>
+                        </Border>
+                    </Grid>
+
+                    <Grid Grid.Column="1" Margin="-20,0,-10,0">
+                        <Border BorderBrush="{DynamicResource secondColor}"
+                                BorderThickness="0,0,0,2">
+                            <StackPanel Orientation="Horizontal" Margin="350,0,0,0">
+                                <RadioButton x:Name = "SessionsRB" Width="170" HorizontalAlignment="Center"  Command="{Binding SessionsCommand}" Style="{StaticResource MyRadioButtonStyle}" IsChecked="True" DockPanel.Dock="Top">SESSIONS</RadioButton>
+                                <RadioButton x:Name = "DescriptionRB" Width="170" HorizontalAlignment="Center" Command="{Binding DescriptionCommand}" Style="{StaticResource MyRadioButtonStyle}" DockPanel.Dock="Top">DESCRIPTION</RadioButton>
+                                <RadioButton x:Name = "TrailerRB" Width="170" HorizontalAlignment="Center" Command="{Binding TrailerCommand}" Style="{StaticResource MyRadioButtonStyle}" DockPanel.Dock="Top">TRAILER</RadioButton>
+                            </StackPanel>
+                        </Border>
+                    </Grid>
+                </Grid>
+            </StackPanel>
+
+            <StackPanel Name="MovieTabPage"     
+                        Orientation="Vertical"
+                        Height="Auto">
+
+            </StackPanel>
+        </StackPanel>
+    </Grid>
+</UserControl>

@@ -1,0 +1,29 @@
+﻿<UserControl x:Class="CinemaPlus.Views.UserControls.AdminSide.EditMoviePlotTabUC"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:CinemaPlus.Views.UserControls.AdminSide"
+             mc:Ignorable="d" 
+             d:DesignHeight="571" 
+             d:DesignWidth="974"
+             Height="571"
+             Width="974">
+    <Grid Background="{DynamicResource firstColor}">
+        <Border BorderThickness="2"
+                CornerRadius="6"
+                    BorderBrush="{StaticResource tenthColor}"
+                    Width="900" Margin="37,25,37,35">
+
+            <TextBox Style="{StaticResource MyTextBoxStyle}"
+                     TextWrapping="Wrap"
+                     FontSize="20"
+                     x:Name="PlotTB"
+                     FontWeight="Medium"
+                     FontFamily="Roboto"
+                     Padding="25,20,20,10"
+                     Text="{Binding Plot, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}">
+            </TextBox>
+        </Border>
+    </Grid>
+</UserControl>

@@ -1,0 +1,191 @@
+[
+  {
+    "Id": "ba2c6f02-c5d5-4ef6-bffb-065dc57a25fa",
+    "Name": "Deniz mall",
+    "Halls": [
+      {
+        "HallName": "BirKart Dolby"
+      },
+      {
+        "HallName": "PAŞA Həyat"
+      },
+      {
+        "HallName": "Access Bank"
+      },
+      {
+        "HallName": "Emiland VIP"
+      },
+      {
+        "HallName": "Hall 6"
+      },
+      {
+        "HallName": "Platinum"
+      },
+      {
+        "HallName": "InvestAZ"
+      }
+    ]
+  },
+  {
+    "Id": "ba2c6f02-c5d5-4ef6-bffb-065dc57a25fa",
+    "Name": "Gənclik Mall",
+    "Halls": [
+      {
+        "HallName": "Platinum"
+      },
+      {
+        "HallName": "Hall 6"
+      },
+      {
+        "HallName": "Hall 7"
+      },
+      {
+        "HallName": "Tam Kart (Atmos)"
+      },
+      {
+        "HallName": "Emiland VIP"
+      },
+      {
+        "HallName": "PAŞA Həyat"
+      },
+      {
+        "HallName": "Access Bank"
+      }
+    ]
+  },
+  {
+    "Id": "ba2c6f02-c5d5-4ef6-bffb-065dc57a25fa",
+    "Name": "28 Mall",
+    "Halls": [
+      {
+        "HallName": "PAŞA Sığorta"
+      },
+      {
+        "HallName": "Berqa"
+      },
+      {
+        "HallName": "InvestAZ"
+      },
+      {
+        "HallName": "Hall 7"
+      },
+      {
+        "HallName": "Emiland VIP"
+      },
+      {
+        "HallName": "Access Bank"
+      },
+      {
+        "HallName": "PAŞA Həyat"
+      }
+    ]
+  },
+  {
+    "Id": "ba2c6f02-c5d5-4ef6-bffb-065dc57a25fa",
+    "Name": "Azerbaijan Cinema",
+    "Halls": [
+      {
+        "HallName": "Coffee `Njoy"
+      },
+      {
+        "HallName": "Unicapital"
+      },
+      {
+        "HallName": "Access Bank"
+      }
+    ]
+  },
+  {
+    "Id": "ba2c6f02-c5d5-4ef6-bffb-065dc57a25fa",
+    "Name": "Amburan Mall",
+    "Halls": [
+      {
+        "HallName": "Birkart"
+      },
+      {
+        "HallName": "Berqa"
+      },
+      {
+        "HallName": "Emiland VIP"
+      },
+      {
+        "HallName": "PAŞA Həyat"
+      }
+    ]
+  },
+  {
+    "Id": "ba2c6f02-c5d5-4ef6-bffb-065dc57a25fa",
+    "Name": "Sumgayit",
+    "Halls": [
+      {
+        "HallName": "Neo Kart"
+      },
+      {
+        "HallName": "Access Bank"
+      },
+      {
+        "HallName": "BirKart Dolby"
+      }
+    ]
+  },
+  {
+    "Id": "ba2c6f02-c5d5-4ef6-bffb-065dc57a25fa",
+    "Name": "Khamsa Park",
+    "Halls": [
+      {
+        "HallName": "Hall 3"
+      },
+      {
+        "HallName": "Tam Kart (Atmos)"
+      },
+      {
+        "HallName": "Hall 7"
+      },
+      {
+        "HallName": "PAŞA Sığorta"
+      },
+      {
+        "HallName": "PAŞA Həyat"
+      },
+      {
+        "HallName": "Emiland VIP"
+      }
+    ]
+  },
+  {
+    "Id": "ba2c6f02-c5d5-4ef6-bffb-065dc57a25fa",
+    "Name": "Ganja Mall",
+    "Halls": [
+      {
+        "HallName": "Hall 4"
+      }
+    ]
+  },
+  {
+    "Id": "ba2c6f02-c5d5-4ef6-bffb-065dc57a25fa",
+    "Name": "Nakhchivan",
+    "Halls": [
+      {
+        "HallName": "Hall 7"
+      }
+    ]
+  },
+  {
+    "Id": "ba2c6f02-c5d5-4ef6-bffb-065dc57a25fa",
+    "Name": "Shamakhi",
+    "Halls": [
+      {
+        "HallName": "Emiland VIP"
+      },
+      {
+        "HallName": "Emiland VIP"
+      },
+      {
+        "HallName": "BirKart Dolby"
+      },
+      {
+        "HallName": "Birkart"
+      }
+    ]
+  }
+]

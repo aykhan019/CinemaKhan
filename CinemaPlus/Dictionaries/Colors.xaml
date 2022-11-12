@@ -1,0 +1,25 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <SolidColorBrush x:Key="firstColor" Color="#FFFFFF"></SolidColorBrush>
+    <SolidColorBrush x:Key="secondColor" Color="#1D429A"></SolidColorBrush>
+    <SolidColorBrush x:Key="thirdColor" Color="#00ACEC"></SolidColorBrush>
+    <SolidColorBrush x:Key="fourthColor" Color="#808080"></SolidColorBrush>
+    <SolidColorBrush x:Key="fifthColor" Color="#000000"></SolidColorBrush>
+    <SolidColorBrush x:Key="sixthColor" Color="#0075BC"></SolidColorBrush>
+    <SolidColorBrush x:Key="seventhColor" Color="#405FB3"></SolidColorBrush>
+    <SolidColorBrush x:Key="eighthColor" Color="#1D2730"></SolidColorBrush>
+    <SolidColorBrush x:Key="ninthColor" Color="#BDC0C3"></SolidColorBrush>
+    <SolidColorBrush x:Key="tenthColor" Color="#383838"></SolidColorBrush>
+    <SolidColorBrush x:Key="backUpColor" Color="#00ACEC"></SolidColorBrush> 
+
+    <!--<SolidColorBrush x:Key="firstColor" Color="Gray"></SolidColorBrush>
+    <SolidColorBrush x:Key="secondColor" Color="SpringGreen"></SolidColorBrush>
+    <SolidColorBrush x:Key="thirdColor" Color="Yellow"></SolidColorBrush>
+    <SolidColorBrush x:Key="fourthColor" Color="White"></SolidColorBrush>
+    <SolidColorBrush x:Key="fifthColor" Color="Blue"></SolidColorBrush>
+    <SolidColorBrush x:Key="sixthColor" Color="Pink"></SolidColorBrush>
+    <SolidColorBrush x:Key="seventhColor" Color="Violet"></SolidColorBrush>
+    <SolidColorBrush x:Key="eighthColor" Color="SaddleBrown"></SolidColorBrush>
+    <SolidColorBrush x:Key="ninthColor" Color="Firebrick"></SolidColorBrush>-->
+</ResourceDictionary>   

@@ -1,0 +1,132 @@
+﻿<UserControl x:Class="CinemaPlus.Views.UserControls.HomePage.AboutUsUC"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:CinemaPlus.Views.UserControls.HomePage" xmlns:endofpage="clr-namespace:CinemaPlus.Views.UserControls.EndOfPage"
+             mc:Ignorable="d" 
+             Height="940"
+             Width="1500"
+             d:DesignHeight="3000" 
+             d:DesignWidth="1500"
+             Background="{DynamicResource firstColor}"
+             VerticalAlignment="Top"
+             HorizontalAlignment="Center">
+    <ScrollViewer HorizontalScrollBarVisibility="Disabled"
+                  VerticalScrollBarVisibility="Auto"
+                  Margin="20"
+                  x:Name="AboutUsScroll">
+        <StackPanel Height="1850" Orientation="Vertical">
+
+            <Canvas Background="Red" Height="1850" Margin="0,0,0,900">
+                <Image  Source="\Images\backgroundAboutUs.jpg" Stretch="Fill" Height="1860" Width="1470" HorizontalAlignment="Left" VerticalAlignment="Top" Canvas.Left="-10"/>
+
+                <Viewbox>
+                    <StackPanel>
+
+                        <TextBlock Foreground="{DynamicResource firstColor}"
+                               FontSize="27"
+                               FontFamily="Georgia"
+                               Padding="100"
+                               TextAlignment="Center"
+                               Width="1464"
+                               Margin="-310,-250,-310,-310"
+                               TextWrapping="Wrap" 
+                               Height="127">“CinemaKhan”</TextBlock>
+
+                        <TextBlock Height="898" 
+                               Foreground="{DynamicResource firstColor}"
+                               FontSize="24"
+                               FontFamily="Georgia"
+                               Padding="100"
+                               TextAlignment="Left"
+                               Margin="0, 40"
+                               Width="1464"
+                               TextWrapping="Wrap">
+
+                        
+The chain of cinemas “CinemaKhan” includes 9 cinemas, 50+ screens and 5000+ seats.
+<LineBreak></LineBreak>
+<LineBreak></LineBreak>
+"CinemaKhan" is a chain of cinemas that has a digital projection system with a high degree and the ability to display 3D content. As well as the superb movie screens, Enhanced 4KBarco high definition and image clarity technologies make it possible to display movies in the best and fullest quality.
+<LineBreak></LineBreak>
+<LineBreak></LineBreak>
+
+The concept of "Platinum Movie Suites", used in the chain of cinemas "CinemaKhan", offers the opportunity to watch movies in a hall with luxurious leather Italian and Spanish armchairs with increased comfort and a reclining back, one can order the food and drinks right during the movie show.
+<LineBreak></LineBreak>
+<LineBreak></LineBreak>
+
+Unique Skybox halls are available only in the “CinemaKhan”. Glazed 6 Skybox mini-halls occupy the upper tiers of the auditorium, with 6 to 12 seats. Spectators have the opportunity to watch movies on comfortable leather chairs equipped with additional equipment and chargers for gadgets. There is separate entrance to each Skybox hall using an elevator.
+<LineBreak></LineBreak>
+<LineBreak></LineBreak>
+
+There are two VIP DIAMOND halls in the cinema for the special guests, equipped with large comfortable automatic folding chairs with built-in tables and a footstool. All chairs are located at some distance from each other, which creates an atmosphere of privacy and comfort. In the last rows, comfortable sofas reminiscent of a home environment are installed.
+<LineBreak></LineBreak>
+<LineBreak></LineBreak>
+
+In addition, thechain of cinemas "CinemaKhan" has applied the world system Dolby Atmos which is an innovative in Azerbaijan. With the ability to place and move sound anywhere in the cinema, Dolby Atmos technology allows filmmakers to take movie sound to a whole new level. As a result, the viewer does not just watch what is happening on the screen, but moves to the center of events.
+<LineBreak></LineBreak>
+<LineBreak></LineBreak>
+
+Also, the 4DX format in our country is available only in the “CinemaKhan” cinemas. Innovative 4DX cinema technology enhances the visual effects of action-packed blockbusters and horror films with additional special effects such as motion, chair rotation and jolts, water spray and wind, lightning and snow, soap bubbles and fragrance. As a result, 4DX is one of the most immersive formats in the film industry, drawing viewers into the action on the big screen.
+                        </TextBlock>
+                    </StackPanel>
+                </Viewbox>
+            </Canvas>
+
+            <Canvas Width="1688">
+                <Canvas Background="Transparent" Height="51" Canvas.Top="-1122" Width="1462" HorizontalAlignment="Center" VerticalAlignment="Top">
+
+
+                    <TextBlock Height="Auto" 
+                               Foreground="{DynamicResource firstColor}"
+                               FontSize="24"
+                               FontFamily="Georgia"
+                               Padding="100"
+                               TextAlignment="Center"
+                               TextWrapping="Wrap" HorizontalAlignment="Center" Canvas.Top="-197" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" Width="830" Canvas.Left="281">
+                    The network of cinemas "CinemaKhan" includes 9 cinemas, 50+ screens and 5000+ seats.
+                    </TextBlock>
+
+                    <Image Source="\Images\sides.png" Stretch="Fill" Height="190" HorizontalAlignment="Left" VerticalAlignment="Center" Width="110"/>
+                    <Image Source="\Images\i1.png" Stretch="Fill" Height="158" Width="98" Canvas.Left="647" Canvas.Top="-271" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+                    <Image Source="\Images\i2.png" Stretch="Fill" Height="114" Width="112" Canvas.Left="999" Canvas.Top="-619" RenderTransformOrigin="0.312,0.276" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+                    <Image Source="\Images\i3.png" Stretch="Fill" Height="118" Width="132" Canvas.Left="293" Canvas.Top="-623" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+                    <endofpage:EndingUC x:Name="AboutUsEndingView" HorizontalAlignment="Left" Canvas.Left="78" VerticalAlignment="Center"/>
+                    <Image Source="\Images\sides2.png" Height="190" Stretch="Fill" RenderTransformOrigin="0.5,0.5" Width="113" Canvas.Left="1349" HorizontalAlignment="Left" VerticalAlignment="Center">
+                        <Image.RenderTransform>
+                            <TransformGroup>
+                                <ScaleTransform/>
+                                <SkewTransform/>
+                                <RotateTransform Angle="180"/>
+                                <TranslateTransform/>
+                            </TransformGroup>
+                        </Image.RenderTransform>
+                    </Image>
+                    <TextBlock Height="Auto" 
+                    Foreground="{DynamicResource firstColor}"
+                    FontSize="24"
+                    FontFamily="Georgia"
+                    Padding="100"
+                    TextAlignment="Center"
+                    TextWrapping="Wrap" Canvas.Top="-566" RenderTransformOrigin="0.5,0.5" Width="880" Canvas.Left="623" HorizontalAlignment="Center" VerticalAlignment="Top">
+                    
+                    The attending of ‘Platinum Movie Suits’ will leave you with unforgettable impression about our cinema theatre. The conception of this premium cinema hall offers viewers to watch films in hall supplied with Italian luxurious leather superior jump seat armchairs, the possibility of ordering food and beverages right during the screening of film.
+                    </TextBlock>
+                    <TextBlock Height="Auto" 
+                    Foreground="{DynamicResource firstColor}"
+                    FontSize="24"
+                    FontFamily="Georgia"
+                    Padding="100"
+                    TextAlignment="Center"
+                    TextWrapping="Wrap" Canvas.Top="-566" RenderTransformOrigin="0.5,0.5" Width="830" HorizontalAlignment="Left" VerticalAlignment="Center" Canvas.Left="-56">
+                    CinemaKhan offers to its guests possibility to purchase tickets via various comfortable for them ways: at the official site of cinema theatre: http://www.cinemaplus.az/, using recently launched application managed by operating system IOS and Android or direct from box offices of cinema theatre.</TextBlock>
+                </Canvas>
+            </Canvas>
+        </StackPanel>
+    </ScrollViewer>
+</UserControl>
+
+
+
+    

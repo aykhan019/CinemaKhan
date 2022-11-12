@@ -1,0 +1,182 @@
+﻿<UserControl x:Class="CinemaPlus.Views.UserControls.MovieUC.MovieDescriptionUC"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:CinemaPlus.Views.UserControls.MovieUC"
+             mc:Ignorable="d" 
+             Height="763"
+             Width="1500"
+             d:DesignHeight="763"
+             d:DesignWidth="1500"
+             Background="{DynamicResource firstColor}">
+
+    <ScrollViewer VerticalScrollBarVisibility="Auto"
+                  HorizontalScrollBarVisibility="Disabled"
+                  Name="MovieDescriptionScroll">
+
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="0"></RowDefinition>
+                <RowDefinition Height="450"></RowDefinition>
+                <RowDefinition></RowDefinition>
+            </Grid.RowDefinitions>
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="875"></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+
+            <Grid Grid.Row="1"
+                  Grid.Column="0">
+                <StackPanel Orientation="Horizontal">
+                    <Image Source="{Binding PosterImageSource, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
+                       Stretch="Fill"
+                       x:Name="Image"
+                       Margin="0,-2,0,0"
+                       Width="300">
+                    </Image>
+                    <TextBlock Background="{StaticResource eighthColor}"
+                           Width="570"
+                           Height="455"
+                           FontSize="18"
+                           Margin="0,-7,0,-3"
+                           Foreground="{StaticResource ninthColor}"
+                           Padding="50,40,50,10"
+                           Style="{StaticResource MyTextBlockStyle}"
+                           Text="{Binding Plot}"/>
+                </StackPanel>
+            </Grid>
+
+            <Grid Grid.Row="1"
+              Grid.Column="2">
+                <StackPanel Height="450"
+                        Orientation="Horizontal"
+                        Width="625">
+                    <Grid Width="620">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height = "49.6"/>
+                            <RowDefinition Height = "49.6"/>
+                            <RowDefinition Height = "49.6"/>
+                            <RowDefinition Height = "49.6"/>
+                            <RowDefinition Height = "49.6"/>
+                            <RowDefinition Height = "49.6"/>
+                            <RowDefinition Height = "49.6"/>
+                            <RowDefinition Height = "49.6"/>
+                            <RowDefinition Height = "49.6"/>
+                        </Grid.RowDefinitions>
+
+                        <Grid Grid.Row="0">
+                            <Border BorderBrush="{StaticResource fourthColor}"
+                                    BorderThickness="0,0,0,0.5"
+                                    Margin="10,0,0,0">
+                                <StackPanel Orientation="Horizontal">
+                                    <TextBlock Style = "{StaticResource MyTextBlockStyle2}" Width="170"><Run Text="Formats"/></TextBlock>
+                                    <StackPanel Width="468.75" Height="51" x:Name="FormatsStackPanel" Orientation="Horizontal"/>
+                                </StackPanel>
+                            </Border>
+                        </Grid>
+
+                        <Grid Grid.Row="1">
+                            <Border BorderBrush="{StaticResource fourthColor}"
+                                    BorderThickness="0,0,0,0.5"
+                                    Margin="10,0,0,0">
+                                <StackPanel Orientation="Horizontal">
+                                    <TextBlock Style = "{StaticResource MyTextBlockStyle2}" Width="155"><Run Text="Title"/></TextBlock>
+                                    <TextBlock Style = "{StaticResource MyTextBlockStyle2}" TextAlignment="Left" TextWrapping="NoWrap" Foreground="{StaticResource fifthColor}" Width="435" Text="{Binding Movie.Title}"/>
+                                </StackPanel>
+                            </Border>
+                        </Grid>
+
+                        <Grid Grid.Row="2">
+                            <Border BorderBrush="{StaticResource fourthColor}"
+                                    BorderThickness="0,0,0,0.5"
+                                    Margin="10,0,0,0">
+                                <StackPanel Orientation="Horizontal">
+                                    <TextBlock Style = "{StaticResource MyTextBlockStyle2}"><Run Text="IMDb Rating"/></TextBlock>
+                                    <TextBlock Style = "{StaticResource MyTextBlockStyle2}" TextAlignment="Right" TextWrapping="NoWrap" Foreground="{StaticResource fifthColor}" Width="54" Text="{Binding Movie.ImdbRating}"/>
+                                    <Image Source="\Images\star.png" Height="30" Width="30" Margin="0,0,0,-2"/>
+                                </StackPanel>
+                            </Border>
+                        </Grid>
+
+                        <Grid Grid.Row="3">
+                            <Border BorderBrush="{StaticResource fourthColor}"
+                                    BorderThickness="0,0,0,0.5"
+                                    Margin="10,0,0,0">
+                                <StackPanel Orientation="Horizontal">
+                                    <TextBlock Style = "{StaticResource MyTextBlockStyle2}"><Run Text="Country"/></TextBlock>
+                                    <TextBlock Style = "{StaticResource MyTextBlockStyle2}" Foreground="{StaticResource fifthColor}" Width="468.75" Text="{Binding Country}"/>
+                                </StackPanel>
+                            </Border>
+                        </Grid>
+
+                        <Grid Grid.Row="4">
+                            <Border BorderBrush="{StaticResource fourthColor}"
+                                    BorderThickness="0,0,0,0.5"
+                                    Margin="10,0,0,0">
+                                <StackPanel Orientation="Horizontal">
+                                    <TextBlock Style = "{StaticResource MyTextBlockStyle2}" Text="{Binding Director}"/>
+                                    <TextBlock Style = "{StaticResource MyTextBlockStyle2}" Foreground="{StaticResource fifthColor}" Width="468.75" Text="{Binding Movie.Director}"/>
+                                </StackPanel>
+                            </Border>
+                        </Grid>
+
+                        <Grid Grid.Row="5">
+                            <Border BorderBrush="{StaticResource fourthColor}"
+                                    BorderThickness="0,0,0,0.5"
+                                    Margin="10,0,0,0">
+                                <StackPanel Orientation="Horizontal">
+                                    <TextBlock Style = "{StaticResource MyTextBlockStyle2}" Text="{Binding Writer}"/>
+                                    <TextBlock Style = "{StaticResource MyTextBlockStyle2}" Foreground="{StaticResource fifthColor}" Width="468.75" Text="{Binding Writers}"/>
+                                </StackPanel>
+                            </Border>
+                        </Grid>
+
+                        <Grid Grid.Row="6">
+                            <Border BorderBrush="{StaticResource fourthColor}"
+                                    BorderThickness="0,0,0,0.5"
+                                    Margin="10,0,0,0">
+                                <StackPanel Orientation="Horizontal">
+                                    <TextBlock Style = "{StaticResource MyTextBlockStyle2}"><Run Text="Actors"/></TextBlock>
+                                    <TextBlock Style = "{StaticResource MyTextBlockStyle2}" Foreground="{StaticResource fifthColor}" Width="468.75" Text="{Binding Actors}"/>
+                                </StackPanel>
+                            </Border>
+                        </Grid>
+
+                        <Grid Grid.Row="7">
+                            <Border BorderBrush="{StaticResource fourthColor}"
+                                    BorderThickness="0,0,0,0.5"
+                                    Margin="10,0,0,0">
+                                <StackPanel Orientation="Horizontal">
+                                    <TextBlock Style = "{StaticResource MyTextBlockStyle2}"><Run Text="Duration"/></TextBlock>
+                                    <TextBlock Style = "{StaticResource MyTextBlockStyle2}" Foreground="{StaticResource fifthColor}" Width="468.75"  Text="{Binding Movie.Runtime}"/>
+                                </StackPanel>
+                            </Border>
+                        </Grid>
+
+                        <Grid Grid.Row="8">
+                            <Border BorderBrush="{StaticResource fourthColor}"
+                                    BorderThickness="0,0,0,0.5"
+                                    Margin="10,0,0,0">
+                                <StackPanel Orientation="Horizontal">
+                                    <TextBlock Style = "{StaticResource MyTextBlockStyle2}" Text="{Binding Genre}"/>
+                                    <TextBlock Style = "{StaticResource MyTextBlockStyle2}" Foreground="{StaticResource fifthColor}" Width="468.75" Text="{Binding Genres}"/>
+                                </StackPanel>
+                            </Border>
+                        </Grid>
+                    </Grid>
+                </StackPanel>
+            </Grid>
+
+            <Grid Grid.Row="2"
+              Grid.Column="0"
+              Grid.ColumnSpan="2">
+                <StackPanel x:Name="EndOfDescription">
+
+                </StackPanel>
+            </Grid>
+
+        </Grid>
+    </ScrollViewer>
+</UserControl>

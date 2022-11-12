@@ -1,0 +1,323 @@
+﻿<Window x:Class="CinemaPlus.Views.Main.SelectSeatsWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CinemaPlus.Views.Main"
+        mc:Ignorable="d"
+        Title="SelectSeatsWindow" 
+        WindowStartupLocation="Manual"
+        WindowStyle="None" 
+        AllowsTransparency="True" 
+        Background="Transparent"
+        ShowInTaskbar="False"
+        Height="700"    
+        Width="900"
+        d:DesignHeight="700"
+        d:DesignWidth="900">
+    <Border CornerRadius="10"
+            Padding="3" 
+            BorderThickness="3"
+            Background="{DynamicResource secondColor}" >
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height="3*"></RowDefinition>
+                <RowDefinition Height="1*"></RowDefinition>
+            </Grid.RowDefinitions>
+
+            <Grid Grid.Row="0"
+                  Background="{DynamicResource secondColor}">
+                <Canvas>
+                    <Button Width="30"
+                            Height="30"
+                            Canvas.Top="0"
+                            Canvas.Right="0"
+                            Cursor="Hand"
+                            Command="{Binding CloseCommand}">
+                        <Button.Template>
+                            <ControlTemplate TargetType="Button">
+                                <Grid>
+                                    <Ellipse Fill="White"/>
+                                    <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" Content=""/>
+                                    <Image Source="\Images\close.png"></Image>
+                                </Grid>
+                            </ControlTemplate>
+                        </Button.Template>
+                    </Button>
+                    <StackPanel Width="858"
+                                HorizontalAlignment="Left" VerticalAlignment="Center">
+                        <StackPanel HorizontalAlignment="Center"
+                                    Margin="30,0,0,0"
+                                    Width="500">
+                            <TextBlock Cursor="IBeam" Width = "Auto" HorizontalAlignment="Center" Style="{StaticResource MyTextBlockStyle}" Foreground="{DynamicResource firstColor}" Text="{Binding MovieName}"></TextBlock>
+                            <TextBlock Cursor="IBeam" Width = "Auto" HorizontalAlignment="Center" Style="{StaticResource MyTextBlockStyle}" Foreground="{DynamicResource firstColor}" Text="{Binding Session}"></TextBlock>
+                            <TextBlock Cursor="IBeam"  Width = "Auto" HorizontalAlignment="Center" Style="{StaticResource MyTextBlockStyle}" Foreground="{DynamicResource firstColor}" Text="{Binding CinemaAndHall}"></TextBlock>
+                            <StackPanel Width="Auto" HorizontalAlignment="Center" Orientation="Horizontal" x:Name="FormatsStackPanel" Height="50"></StackPanel>
+                        </StackPanel>
+                    </StackPanel>
+                    <Border Width="38"
+                            Height="38"
+                            BorderBrush="{DynamicResource firstColor}"
+                            BorderThickness="1"
+                            Panel.ZIndex="2"
+                            CornerRadius="6" Canvas.Left="378" Canvas.Top="79" HorizontalAlignment="Left" VerticalAlignment="Center">
+                    </Border>
+                    <Border Width="38"
+                        Height="38"
+                        BorderBrush="{DynamicResource firstColor}"
+                        BorderThickness="1"
+                            Panel.ZIndex="2"
+                        CornerRadius="6" Canvas.Left="425" Canvas.Top="79" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+                    <Border Width="38"
+                        Height="38"
+                        BorderBrush="{DynamicResource firstColor}"
+                        BorderThickness="1"
+                            Panel.ZIndex="2"
+                        CornerRadius="6" Canvas.Left="472" Canvas.Top="79" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+                </Canvas>
+            </Grid>
+
+            <Grid Grid.Row="1"
+                  Background="{DynamicResource firstColor}">
+
+
+                <Canvas>
+                    <TextBlock Height="315" 
+                               Width="20" 
+                               Foreground="{StaticResource fifthColor}" 
+                               Canvas.Left="117"
+                               Style="{StaticResource MyTextBlockStyle}"
+                               FontSize="34" 
+                               Canvas.Top="21"><Run Text="1 2 3 4 5 6 7"/>
+                    </TextBlock>
+                    <TextBlock Height="315" 
+                               Width="20" 
+                               Foreground="{StaticResource fifthColor}" 
+                               Canvas.Right="117"
+                               Style="{StaticResource MyTextBlockStyle}"
+                               FontSize="34" 
+                               Canvas.Top="21"><Run Text="1 2 3 4 5 6 7"/></TextBlock>
+                </Canvas>
+
+
+                <WrapPanel Background="Transparent" 
+                           Margin="184,21,184,107"
+                           Orientation="Horizontal"
+                           Name="SeatsWrapPanel">
+                    <ToggleButton Style="{StaticResource MyToggleButtonStyle2}"  Command="{Binding SeatSelectedCommand}" CommandParameter="{Binding RelativeSource={RelativeSource Self}}">1</ToggleButton>
+                    <ToggleButton Style="{StaticResource MyToggleButtonStyle2}"  Command="{Binding SeatSelectedCommand}" CommandParameter="{Binding RelativeSource={RelativeSource Self}}">2</ToggleButton>
+                    <ToggleButton Style="{StaticResource MyToggleButtonStyle2}"  Command="{Binding SeatSelectedCommand}" CommandParameter="{Binding RelativeSource={RelativeSource Self}}">3</ToggleButton>
+                    <ToggleButton Style="{StaticResource MyToggleButtonStyle2}"  Command="{Binding SeatSelectedCommand}" CommandParameter="{Binding RelativeSource={RelativeSource Self}}">4</ToggleButton>
+                    <ToggleButton Style="{StaticResource MyToggleButtonStyle2}"  Command="{Binding SeatSelectedCommand}" CommandParameter="{Binding RelativeSource={RelativeSource Self}}">5</ToggleButton>
+                    <ToggleButton Style="{StaticResource MyToggleButtonStyle2}"  Command="{Binding SeatSelectedCommand}" CommandParameter="{Binding RelativeSource={RelativeSource Self}}">6</ToggleButton>
+                    <ToggleButton Style="{StaticResource MyToggleButtonStyle2}"  Command="{Binding SeatSelectedCommand}" CommandParameter="{Binding RelativeSource={RelativeSource Self}}">7</ToggleButton>
+                    <ToggleButton Style="{StaticResource MyToggleButtonStyle2}"  Command="{Binding SeatSelectedCommand}" CommandParameter="{Binding RelativeSource={RelativeSource Self}}">8</ToggleButton>
+                    <ToggleButton Style="{StaticResource MyToggleButtonStyle2}"  Command="{Binding SeatSelectedCommand}" CommandParameter="{Binding RelativeSource={RelativeSource Self}}">9</ToggleButton>
+                    <ToggleButton Style="{StaticResource MyToggleButtonStyle2}"  Command="{Binding SeatSelectedCommand}" CommandParameter="{Binding RelativeSource={RelativeSource Self}}">10</ToggleButton>
+                    <ToggleButton Style="{StaticResource MyToggleButtonStyle2}"  Command="{Binding SeatSelectedCommand}" CommandParameter="{Binding RelativeSource={RelativeSource Self}}">11</ToggleButton>
+                    <ToggleButton Style="{StaticResource MyToggleButtonStyle2}"  Command="{Binding SeatSelectedCommand}" CommandParameter="{Binding RelativeSource={RelativeSource Self}}">12</ToggleButton>
+                    <ToggleButton Style="{StaticResource MyToggleButtonStyle2}"  Command="{Binding SeatSelectedCommand}" CommandParameter="{Binding RelativeSource={RelativeSource Self}}">13</ToggleButton>
+                    <ToggleButton Style="{StaticResource MyToggleButtonStyle2}"  Command="{Binding SeatSelectedCommand}" CommandParameter="{Binding RelativeSource={RelativeSource Self}}">1</ToggleButton>
+                    <ToggleButton Style="{StaticResource MyToggleButtonStyle2}"  Command="{Binding SeatSelectedCommand}" CommandParameter="{Binding RelativeSource={RelativeSource Self}}">2</ToggleButton>
+                    <ToggleButton Style="{StaticResource MyToggleButtonStyle2}"  Command="{Binding SeatSelectedCommand}" CommandParameter="{Binding RelativeSource={RelativeSource Self}}">3</ToggleButton>
+                    <ToggleButton Style="{StaticResource MyToggleButtonStyle2}"  Command="{Binding SeatSelectedCommand}" CommandParameter="{Binding RelativeSource={RelativeSource Self}}">4</ToggleButton>
+                    <ToggleButton Style="{StaticResource MyToggleButtonStyle2}"  Command="{Binding SeatSelectedCommand}" CommandParameter="{Binding RelativeSource={RelativeSource Self}}">5</ToggleButton>
+                    <ToggleButton Style="{StaticResource MyToggleButtonStyle2}"  Command="{Binding SeatSelectedCommand}" CommandParameter="{Binding RelativeSource={RelativeSource Self}}">6</ToggleButton>
+                    <ToggleButton Style="{StaticResource MyToggleButtonStyle2}"  Command="{Binding SeatSelectedCommand}" CommandParameter="{Binding RelativeSource={RelativeSource Self}}">7</ToggleButton>
+                    <ToggleButton Style="{StaticResource MyToggleButtonStyle2}"  Command="{Binding SeatSelectedCommand}" CommandParameter="{Binding RelativeSource={RelativeSource Self}}">8</ToggleButton>
+                    <ToggleButton Style="{StaticResource MyToggleButtonStyle2}"  Command="{Binding SeatSelectedCommand}" CommandParameter="{Binding RelativeSource={RelativeSource Self}}">9</ToggleButton>
+                    <ToggleButton Style="{StaticResource MyToggleButtonStyle2}"  Command="{Binding SeatSelectedCommand}" CommandParameter="{Binding RelativeSource={RelativeSource Self}}">10</ToggleButton>
+                    <ToggleButton Style="{StaticResource MyToggleButtonStyle2}"  Command="{Binding SeatSelectedCommand}" CommandParameter="{Binding RelativeSource={RelativeSource Self}}">11</ToggleButton>
+                    <ToggleButton Style="{StaticResource MyToggleButtonStyle2}"  Command="{Binding SeatSelectedCommand}" CommandParameter="{Binding RelativeSource={RelativeSource Self}}">12</ToggleButton>
+                    <ToggleButton Style="{StaticResource MyToggleButtonStyle2}"  Command="{Binding SeatSelectedCommand}" CommandParameter="{Binding RelativeSource={RelativeSource Self}}">13</ToggleButton>
+                    <ToggleButton Style="{StaticResource MyToggleButtonStyle2}"  Command="{Binding SeatSelectedCommand}" CommandParameter="{Binding RelativeSource={RelativeSource Self}}">1</ToggleButton>
+                    <ToggleButton Style="{StaticResource MyToggleButtonStyle2}"  Command="{Binding SeatSelectedCommand}" CommandParameter="{Binding RelativeSource={RelativeSource Self}}">2</ToggleButton>
+                    <ToggleButton Style="{StaticResource MyToggleButtonStyle2}"  Command="{Binding SeatSelectedCommand}" CommandParameter="{Binding RelativeSource={RelativeSource Self}}">3</ToggleButton>
+                    <ToggleButton Style="{StaticResource MyToggleButtonStyle2}"  Command="{Binding SeatSelectedCommand}" CommandParameter="{Binding RelativeSource={RelativeSource Self}}">4</ToggleButton>
+                    <ToggleButton Style="{StaticResource MyToggleButtonStyle2}"  Command="{Binding SeatSelectedCommand}" CommandParameter="{Binding RelativeSource={RelativeSource Self}}">5</ToggleButton>
+                    <ToggleButton Style="{StaticResource MyToggleButtonStyle2}"  Command="{Binding SeatSelectedCommand}" CommandParameter="{Binding RelativeSource={RelativeSource Self}}">6</ToggleButton>
+                    <ToggleButton Style="{StaticResource MyToggleButtonStyle2}"  Command="{Binding SeatSelectedCommand}" CommandParameter="{Binding RelativeSource={RelativeSource Self}}">7</ToggleButton>
+                    <ToggleButton Style="{StaticResource MyToggleButtonStyle2}"  Command="{Binding SeatSelectedCommand}" CommandParameter="{Binding RelativeSource={RelativeSource Self}}">8</ToggleButton>
+                    <ToggleButton Style="{StaticResource MyToggleButtonStyle2}"  Command="{Binding SeatSelectedCommand}" CommandParameter="{Binding RelativeSource={RelativeSource Self}}">9</ToggleButton>
+                    <ToggleButton Style="{StaticResource MyToggleButtonStyle2}"  Command="{Binding SeatSelectedCommand}" CommandParameter="{Binding RelativeSource={RelativeSource Self}}">10</ToggleButton>
+                    <ToggleButton Style="{StaticResource MyToggleButtonStyle2}"  Command="{Binding SeatSelectedCommand}" CommandParameter="{Binding RelativeSource={RelativeSource Self}}">11</ToggleButton>
+                    <ToggleButton Style="{StaticResource MyToggleButtonStyle2}"  Command="{Binding SeatSelectedCommand}" CommandParameter="{Binding RelativeSource={RelativeSource Self}}">12</ToggleButton>
+                    <ToggleButton Style="{StaticResource MyToggleButtonStyle2}"  Command="{Binding SeatSelectedCommand}" CommandParameter="{Binding RelativeSource={RelativeSource Self}}">13</ToggleButton>
+                    <ToggleButton Style="{StaticResource MyToggleButtonStyle2}"  Command="{Binding SeatSelectedCommand}" CommandParameter="{Binding RelativeSource={RelativeSource Self}}">1</ToggleButton>
+                    <ToggleButton Style="{StaticResource MyToggleButtonStyle2}"  Command="{Binding SeatSelectedCommand}" CommandParameter="{Binding RelativeSource={RelativeSource Self}}">2</ToggleButton>
+                    <ToggleButton Style="{StaticResource MyToggleButtonStyle2}"  Command="{Binding SeatSelectedCommand}" CommandParameter="{Binding RelativeSource={RelativeSource Self}}">3</ToggleButton>
+                    <ToggleButton Style="{StaticResource MyToggleButtonStyle2}"  Command="{Binding SeatSelectedCommand}" CommandParameter="{Binding RelativeSource={RelativeSource Self}}">4</ToggleButton>
+                    <ToggleButton Style="{StaticResource MyToggleButtonStyle2}"  Command="{Binding SeatSelectedCommand}" CommandParameter="{Binding RelativeSource={RelativeSource Self}}">5</ToggleButton>
+                    <ToggleButton Style="{StaticResource MyToggleButtonStyle2}"  Command="{Binding SeatSelectedCommand}" CommandParameter="{Binding RelativeSource={RelativeSource Self}}">6</ToggleButton>
+                    <ToggleButton Style="{StaticResource MyToggleButtonStyle2}"  Command="{Binding SeatSelectedCommand}" CommandParameter="{Binding RelativeSource={RelativeSource Self}}">7</ToggleButton>
+                    <ToggleButton Style="{StaticResource MyToggleButtonStyle2}"  Command="{Binding SeatSelectedCommand}" CommandParameter="{Binding RelativeSource={RelativeSource Self}}">8</ToggleButton>
+                    <ToggleButton Style="{StaticResource MyToggleButtonStyle2}"  Command="{Binding SeatSelectedCommand}" CommandParameter="{Binding RelativeSource={RelativeSource Self}}">9</ToggleButton>
+                    <ToggleButton Style="{StaticResource MyToggleButtonStyle2}"  Command="{Binding SeatSelectedCommand}" CommandParameter="{Binding RelativeSource={RelativeSource Self}}">10</ToggleButton>
+                    <ToggleButton Style="{StaticResource MyToggleButtonStyle2}"  Command="{Binding SeatSelectedCommand}" CommandParameter="{Binding RelativeSource={RelativeSource Self}}">11</ToggleButton>
+                    <ToggleButton Style="{StaticResource MyToggleButtonStyle2}"  Command="{Binding SeatSelectedCommand}" CommandParameter="{Binding RelativeSource={RelativeSource Self}}">12</ToggleButton>
+                    <ToggleButton Style="{StaticResource MyToggleButtonStyle2}"  Command="{Binding SeatSelectedCommand}" CommandParameter="{Binding RelativeSource={RelativeSource Self}}">13</ToggleButton>
+                    <ToggleButton Style="{StaticResource MyToggleButtonStyle2}"  Command="{Binding SeatSelectedCommand}" CommandParameter="{Binding RelativeSource={RelativeSource Self}}">1</ToggleButton>
+                    <ToggleButton Style="{StaticResource MyToggleButtonStyle2}"  Command="{Binding SeatSelectedCommand}" CommandParameter="{Binding RelativeSource={RelativeSource Self}}">2</ToggleButton>
+                    <ToggleButton Style="{StaticResource MyToggleButtonStyle2}"  Command="{Binding SeatSelectedCommand}" CommandParameter="{Binding RelativeSource={RelativeSource Self}}">3</ToggleButton>
+                    <ToggleButton Style="{StaticResource MyToggleButtonStyle2}"  Command="{Binding SeatSelectedCommand}" CommandParameter="{Binding RelativeSource={RelativeSource Self}}">4</ToggleButton>
+                    <ToggleButton Style="{StaticResource MyToggleButtonStyle2}"  Command="{Binding SeatSelectedCommand}" CommandParameter="{Binding RelativeSource={RelativeSource Self}}">5</ToggleButton>
+                    <ToggleButton Style="{StaticResource MyToggleButtonStyle2}"  Command="{Binding SeatSelectedCommand}" CommandParameter="{Binding RelativeSource={RelativeSource Self}}">6</ToggleButton>
+                    <ToggleButton Style="{StaticResource MyToggleButtonStyle2}"  Command="{Binding SeatSelectedCommand}" CommandParameter="{Binding RelativeSource={RelativeSource Self}}">7</ToggleButton>
+                    <ToggleButton Style="{StaticResource MyToggleButtonStyle2}"  Command="{Binding SeatSelectedCommand}" CommandParameter="{Binding RelativeSource={RelativeSource Self}}">8</ToggleButton>
+                    <ToggleButton Style="{StaticResource MyToggleButtonStyle2}"  Command="{Binding SeatSelectedCommand}" CommandParameter="{Binding RelativeSource={RelativeSource Self}}">9</ToggleButton>
+                    <ToggleButton Style="{StaticResource MyToggleButtonStyle2}"  Command="{Binding SeatSelectedCommand}" CommandParameter="{Binding RelativeSource={RelativeSource Self}}">10</ToggleButton>
+                    <ToggleButton Style="{StaticResource MyToggleButtonStyle2}"  Command="{Binding SeatSelectedCommand}" CommandParameter="{Binding RelativeSource={RelativeSource Self}}">11</ToggleButton>
+                    <ToggleButton Style="{StaticResource MyToggleButtonStyle2}"  Command="{Binding SeatSelectedCommand}" CommandParameter="{Binding RelativeSource={RelativeSource Self}}">12</ToggleButton>
+                    <ToggleButton Style="{StaticResource MyToggleButtonStyle2}"  Command="{Binding SeatSelectedCommand}" CommandParameter="{Binding RelativeSource={RelativeSource Self}}">13</ToggleButton>
+                    <ToggleButton Style="{StaticResource MyToggleButtonStyle2}"  Command="{Binding SeatSelectedCommand}" CommandParameter="{Binding RelativeSource={RelativeSource Self}}">1</ToggleButton>
+                    <ToggleButton Style="{StaticResource MyToggleButtonStyle2}"  Command="{Binding SeatSelectedCommand}" CommandParameter="{Binding RelativeSource={RelativeSource Self}}">2</ToggleButton>
+                    <ToggleButton Style="{StaticResource MyToggleButtonStyle2}"  Command="{Binding SeatSelectedCommand}" CommandParameter="{Binding RelativeSource={RelativeSource Self}}">3</ToggleButton>
+                    <ToggleButton Style="{StaticResource MyToggleButtonStyle2}"  Command="{Binding SeatSelectedCommand}" CommandParameter="{Binding RelativeSource={RelativeSource Self}}">4</ToggleButton>
+                    <ToggleButton Style="{StaticResource MyToggleButtonStyle2}"  Command="{Binding SeatSelectedCommand}" CommandParameter="{Binding RelativeSource={RelativeSource Self}}">5</ToggleButton>
+                    <ToggleButton Style="{StaticResource MyToggleButtonStyle2}"  Command="{Binding SeatSelectedCommand}" CommandParameter="{Binding RelativeSource={RelativeSource Self}}">6</ToggleButton>
+                    <ToggleButton Style="{StaticResource MyToggleButtonStyle2}"  Command="{Binding SeatSelectedCommand}" CommandParameter="{Binding RelativeSource={RelativeSource Self}}">7</ToggleButton>
+                    <ToggleButton Style="{StaticResource MyToggleButtonStyle2}"  Command="{Binding SeatSelectedCommand}" CommandParameter="{Binding RelativeSource={RelativeSource Self}}">8</ToggleButton>
+                    <ToggleButton Style="{StaticResource MyToggleButtonStyle2}"  Command="{Binding SeatSelectedCommand}" CommandParameter="{Binding RelativeSource={RelativeSource Self}}">9</ToggleButton>
+                    <ToggleButton Style="{StaticResource MyToggleButtonStyle2}"  Command="{Binding SeatSelectedCommand}" CommandParameter="{Binding RelativeSource={RelativeSource Self}}">10</ToggleButton>
+                    <ToggleButton Style="{StaticResource MyToggleButtonStyle2}"  Command="{Binding SeatSelectedCommand}" CommandParameter="{Binding RelativeSource={RelativeSource Self}}">11</ToggleButton>
+                    <ToggleButton Style="{StaticResource MyToggleButtonStyle2}"  Command="{Binding SeatSelectedCommand}" CommandParameter="{Binding RelativeSource={RelativeSource Self}}">12</ToggleButton>
+                    <ToggleButton Style="{StaticResource MyToggleButtonStyle2}"  Command="{Binding SeatSelectedCommand}" CommandParameter="{Binding RelativeSource={RelativeSource Self}}">13</ToggleButton>
+                    <ToggleButton Style="{StaticResource MyToggleButtonStyle2}"  Command="{Binding SeatSelectedCommand}" CommandParameter="{Binding RelativeSource={RelativeSource Self}}">1</ToggleButton>
+                    <ToggleButton Style="{StaticResource MyToggleButtonStyle2}"  Command="{Binding SeatSelectedCommand}" CommandParameter="{Binding RelativeSource={RelativeSource Self}}">2</ToggleButton>
+                    <ToggleButton Style="{StaticResource MyToggleButtonStyle2}"  Command="{Binding SeatSelectedCommand}" CommandParameter="{Binding RelativeSource={RelativeSource Self}}">3</ToggleButton>
+                    <ToggleButton Style="{StaticResource MyToggleButtonStyle2}"  Command="{Binding SeatSelectedCommand}" CommandParameter="{Binding RelativeSource={RelativeSource Self}}">4</ToggleButton>
+                    <ToggleButton Style="{StaticResource MyToggleButtonStyle2}"  Command="{Binding SeatSelectedCommand}" CommandParameter="{Binding RelativeSource={RelativeSource Self}}">5</ToggleButton>
+                    <ToggleButton Style="{StaticResource MyToggleButtonStyle2}"  Command="{Binding SeatSelectedCommand}" CommandParameter="{Binding RelativeSource={RelativeSource Self}}">6</ToggleButton>
+                    <ToggleButton Style="{StaticResource MyToggleButtonStyle2}"  Command="{Binding SeatSelectedCommand}" CommandParameter="{Binding RelativeSource={RelativeSource Self}}">7</ToggleButton>
+                    <ToggleButton Style="{StaticResource MyToggleButtonStyle2}"  Command="{Binding SeatSelectedCommand}" CommandParameter="{Binding RelativeSource={RelativeSource Self}}">8</ToggleButton>
+                    <ToggleButton Style="{StaticResource MyToggleButtonStyle2}"  Command="{Binding SeatSelectedCommand}" CommandParameter="{Binding RelativeSource={RelativeSource Self}}">9</ToggleButton>
+                    <ToggleButton Style="{StaticResource MyToggleButtonStyle2}"  Command="{Binding SeatSelectedCommand}" CommandParameter="{Binding RelativeSource={RelativeSource Self}}">10</ToggleButton>
+                    <ToggleButton Style="{StaticResource MyToggleButtonStyle2}"  Command="{Binding SeatSelectedCommand}" CommandParameter="{Binding RelativeSource={RelativeSource Self}}">11</ToggleButton>
+                    <ToggleButton Style="{StaticResource MyToggleButtonStyle2}"  Command="{Binding SeatSelectedCommand}" CommandParameter="{Binding RelativeSource={RelativeSource Self}}">12</ToggleButton>
+                    <ToggleButton Style="{StaticResource MyToggleButtonStyle2}"  Command="{Binding SeatSelectedCommand}" CommandParameter="{Binding RelativeSource={RelativeSource Self}}">13</ToggleButton>
+                </WrapPanel>
+
+
+                <TextBlock Canvas.Bottom="20"
+                               Canvas.Left="390"
+                               Width="100"
+                               Height="30"
+                               Style="{StaticResource MyTextBlockStyle}"
+                               Foreground="{StaticResource fourthColor}"
+                               Text="S C R E E N"
+                               TextAlignment="Center" 
+                               HorizontalAlignment="Center" 
+                               Margin="0,355,0,0" 
+                               VerticalAlignment="Top">
+                </TextBlock>
+
+                <Path Data="M1.48902 0.500403L0.352378 241.502L259.985 242.726L1.48902 0.500403Z" Fill="{StaticResource ninthColor}" Margin="651,384,-651,-2" Height="30" RenderTransformOrigin="0.5,0.5">
+                    <Path.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform/>
+                            <SkewTransform/>
+                            <RotateTransform Angle="-0.064"/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </Path.RenderTransform>
+                </Path>
+                <Path Data="M1887 1H1V241H1887V1Z" Fill="{StaticResource ninthColor}" Height="30" Margin="234.5,385,234.5,-2" Stretch="Fill"/>
+                <Path Data="M0.998429 241.488L263.504 241.492L263.508 0.483964L0.998429 241.488Z" Fill="{StaticResource ninthColor}" Margin="-28,384,29,-2" Height="30"/>
+            </Grid>
+
+            <Grid Grid.Row="2"
+                  Background="{DynamicResource secondColor}">
+                <Canvas>
+                    <ToggleButton Style="{StaticResource MyToggleButtonStyle2}"
+                                  IsEnabled="False"
+                                  Background="{DynamicResource firstColor}"
+                                  Canvas.Left="10"
+                                  Canvas.Top="10">
+                    </ToggleButton>
+
+                    <TextBlock Canvas.Top="19"
+                        Canvas.Left="39"
+                        Width="174"
+                        Height="30"
+                        Style="{StaticResource MyTextBlockStyle}"
+                        Foreground="{DynamicResource firstColor}"
+                        Text="Available seats"
+                        TextAlignment="Center"/>
+
+                    <ToggleButton Style="{StaticResource MyToggleButtonStyle2}"
+                                  IsEnabled="False"
+                                  Background="{StaticResource fifthColor}"
+                                  Canvas.Left="230"
+                                  Canvas.Top="10">
+                    </ToggleButton>
+
+                    <TextBlock Canvas.Top="19"
+                        Canvas.Left="240"
+                        Width="174"
+                        Height="30"
+                        Style="{StaticResource MyTextBlockStyle}"
+                        Foreground="{DynamicResource firstColor}"
+                        Text="Busy seats"
+                        TextAlignment="Center"/>
+
+                    <ToggleButton Style="{StaticResource MyToggleButtonStyle2}"
+                                  IsEnabled="False"
+                                  Background="{DynamicResource thirdColor}"
+                                  Canvas.Left="410"
+                                  Canvas.Top="10">
+                    </ToggleButton>
+
+                    <TextBlock Canvas.Top="19"
+                        Canvas.Left="438"
+                        Width="174"
+                        Height="30"
+                        Style="{StaticResource MyTextBlockStyle}"
+                        Foreground="{DynamicResource firstColor}"
+                        Text="Selected seats"
+                        TextAlignment="Center"/>
+
+
+
+                    <Border BorderBrush="{DynamicResource thirdColor}"
+                            Background="{DynamicResource thirdColor}"
+                            BorderThickness="1"
+                            Padding="1"
+                            Canvas.Bottom="20"
+                            Canvas.Right="20"
+                            CornerRadius="5">
+                        <Button Height="45"
+                                Width="170"
+                                Name="ConfirmButton"
+                                BorderBrush="{DynamicResource thirdColor}"
+                                Style="{StaticResource MyButtonStyle1}"
+                                Foreground="{DynamicResource firstColor}"
+                                Background="{StaticResource fourthColor}"
+                                Command="{Binding ConfirmCommand}">
+                            CONFIRM
+                        </Button>
+                    </Border>
+                    <TextBlock Canvas.Bottom="20"
+                               Canvas.Left="294"
+                               Width="292"
+                               Height="41"
+                               Style="{StaticResource MyTextBlockStyle}"
+                               Foreground="{DynamicResource firstColor}"
+                               Text="{Binding Total, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
+                               Cursor="IBeam" 
+                               TextAlignment="Center"
+                               Canvas.Top="93" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+                    <TextBlock Canvas.Bottom="55"
+                        Canvas.Left="390"
+                        Width="100"
+                        Height="30"
+                        Style="{StaticResource MyTextBlockStyle}"
+                        Foreground="{DynamicResource thirdColor}"
+                        Text="Total:"
+                        TextAlignment="Center" HorizontalAlignment="Center" Canvas.Top="65" VerticalAlignment="Top">
+                    </TextBlock>
+                </Canvas>
+            </Grid>
+        </Grid>
+    </Border>
+</Window>

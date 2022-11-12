@@ -1,0 +1,23 @@
+﻿<UserControl x:Class="CinemaPlus.Views.UserControls.EndOfPage.NoSearchResultUC"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:CinemaPlus.Views.UserControls.EndOfPage"
+             mc:Ignorable="d" 
+             d:DesignHeight="400"
+             d:DesignWidth="1300"
+             Height="400"
+             Width="1275"
+             Background="{DynamicResource firstColor}">
+    <Grid>
+        <Canvas>
+            <Image Source="\Images\noresult.png" Height="145" Width="144" Canvas.Left="578" Canvas.Top="81" HorizontalAlignment="Center" VerticalAlignment="Top"></Image>
+            <TextBlock FontWeight="Bold" Style="{StaticResource MyTextBlockStyle2}" FontSize="30" Width="288" Canvas.Left="512" Canvas.Top="230" RenderTransformOrigin="0.545,0.39">No results found</TextBlock>
+            <TextBlock Style="{StaticResource MyTextBlockStyle2}" Foreground="{StaticResource fourthColor}" FontSize="25" Width="884" Canvas.Left="214" Canvas.Top="270" RenderTransformOrigin="0.545,0.39" HorizontalAlignment="Center" VerticalAlignment="Top">Your search returned no results. Try shortening or rephrasing your search.</TextBlock>
+
+
+
+        </Canvas>
+    </Grid>
+</UserControl>

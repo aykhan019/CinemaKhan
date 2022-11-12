@@ -1,0 +1,56 @@
+﻿<UserControl x:Class="CinemaPlus.Views.UserControls.Home.FirstToolsUC"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:CinemaPlus.Views.UserControls.Home"
+             mc:Ignorable="d" 
+             d:DesignHeight="71"
+             d:DesignWidth="1200"
+             Height="80"
+             Width="1200"   
+             VerticalAlignment="Top"
+             Background="{StaticResource firstColor}"
+             VerticalContentAlignment="Center">
+    <Grid>
+        <Border BorderBrush="{StaticResource fourthColor}"
+                    BorderThickness="0,1,0,0">
+            <StackPanel Orientation="Horizontal"
+                        VerticalAlignment="Center"
+                        Margin="40,0,0,0"
+                        Height="80"
+                        Background="{DynamicResource firstColor}">
+
+                <Button Style="{StaticResource MyButtonStyle1}" Command="{Binding PlatiniumCommand}">Platinum</Button>
+                <Button Style="{StaticResource MyButtonStyle1}" Command="{Binding RulesCommand}">Rules</Button>
+                <Button Style="{StaticResource MyButtonStyle1}" Command="{Binding ServicesCommand}">Services</Button>
+                <Button Style="{StaticResource MyButtonStyle1}" Command="{Binding AboutUsCommand}">About Us</Button>
+
+                <Button Style="{StaticResource LanguageButtonStyle}" Command="{Binding InAzerbaijaniCommand}" Margin="40,0,0,0" Width="30">AZ</Button>
+                <Button Style="{StaticResource LanguageButtonStyle}" Command="{Binding InRussianCommand}" Width="35">RU</Button>
+                <Button Style="{StaticResource LanguageButtonStyle}" Command="{Binding InEnglishCommand}" Width="30">EN</Button>
+
+                <Image Source="\Images\appleLogo.png"
+                       Height="25"
+                       Width="25"
+                       Margin="20,0,0,0"
+                       Cursor="Hand">
+                    <Image.InputBindings>
+                        <MouseBinding MouseAction="LeftClick" Command="{Binding AppStoreCommand}"></MouseBinding>
+                    </Image.InputBindings>
+                </Image>
+
+                <Image Source="\Images\androidLogo.png"
+                       Height="25"
+                       Width="25"
+                       Margin="4,0,0,0"
+                       Cursor="Hand">
+                    <Image.InputBindings>
+                        <MouseBinding MouseAction="LeftClick" Command="{Binding GooglePlayCommand}"></MouseBinding>
+                    </Image.InputBindings>
+                </Image>
+
+            </StackPanel>
+        </Border>
+    </Grid>
+</UserControl>

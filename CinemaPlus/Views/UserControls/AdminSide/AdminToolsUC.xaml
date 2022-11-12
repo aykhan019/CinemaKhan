@@ -1,0 +1,45 @@
+﻿<UserControl x:Class="CinemaPlus.Views.UserControls.AdminSide.AdminToolsUC"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:CinemaPlus.Views.UserControls.AdminSide"
+             mc:Ignorable="d" 
+             d:DesignHeight="64"
+             d:DesignWidth="1200"
+             Height="64"
+             Width="1200"
+             VerticalAlignment="Center">
+    <Grid>
+        <Border BorderThickness="0,2,0,2"
+                BorderBrush="{StaticResource tenthColor}" Margin="0,-12,0,-9">
+            <StackPanel Orientation="Horizontal"
+                    Background="{DynamicResource ninthColor}">
+                <Canvas>
+                    <Button Style="{StaticResource MyButtonStyle9}" Command="{Binding AdminHomeCommand}" Width="145" Content ="Admin Home" Canvas.Left="80" Height="81" HorizontalAlignment="Left"/>
+                    <Button Style="{StaticResource MyButtonStyle9}" Command="{Binding ViewPurchasedTicketsCommand}" Width="256" Content="View Purchased Tickets" Canvas.Left="230" Height="81" HorizontalAlignment="Left"/>
+                    <Button Style="{StaticResource MyButtonStyle9}" Command="{Binding BackToUserSideCommand}" Width="195" Content="Back To User Side" Canvas.Left="491" Height="81" HorizontalAlignment="Left"/>
+
+                    <TextBlock Text="Admin : " 
+                               FontSize="24"
+                               Foreground="{StaticResource fifthColor}"
+                               FontWeight="Medium" Canvas.Top="25"  HorizontalAlignment="Left" VerticalAlignment="Center" Canvas.Left="760"/>
+
+
+                    <Image Source="\Images\accountGray.png"
+                       Height="42"
+                       Width="40" HorizontalAlignment="Left" VerticalAlignment="Center" Canvas.Left="715" Canvas.Top="20" RenderTransformOrigin="-8.317,0.57"
+                       />
+
+                    <TextBlock Text="{Binding AdminName, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
+                            FontSize="24"
+                            Foreground="{StaticResource fifthColor}"
+                            FontWeight="Medium"
+                            Canvas.Left="856" Canvas.Top="25" HorizontalAlignment="Left" VerticalAlignment="Center" RenderTransformOrigin="0.949,0.501">
+
+                    </TextBlock>
+                </Canvas>
+            </StackPanel>
+        </Border>
+    </Grid>
+</UserControl>

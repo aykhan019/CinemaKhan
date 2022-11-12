@@ -1,0 +1,208 @@
+﻿<UserControl x:Class="CinemaPlus.Views.UserControls.AdminSide.AddMovieSessionUC"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:CinemaPlus.Views.UserControls.AdminSide"
+             xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity" 
+             xmlns:ei="http://schemas.microsoft.com/expression/2010/interactions"
+             xmlns:ie="http://schemas.microsoft.com/expression/2010/interactivity"
+             mc:Ignorable="d" 
+             d:DesignHeight="571"
+             d:DesignWidth="984"
+             Height="571" 
+             Width="984">
+    <Grid Background="{DynamicResource firstColor}">
+        <Canvas>
+            <Image Source="\Images\backButtonAdminSide.png"
+                   Height="45"
+                   Width="55" 
+                   HorizontalAlignment="Left"
+                   Canvas.Top="12"
+                   VerticalAlignment="Center" 
+                   Canvas.Left="14"
+                   Cursor="Hand">
+                <Image.InputBindings>
+                    <MouseBinding Gesture="LeftClick" Command="{Binding BackCommand}"></MouseBinding>
+                </Image.InputBindings>
+            </Image>
+
+            <TextBlock Style="{StaticResource MyTextBlockStyle2}"
+                       Foreground="{StaticResource tenthColor}"
+                       Text="Add Session"
+                       FontSize="40" 
+                       Width="264"
+                       Canvas.Left="360" Height="75"/>
+
+            <Line X1="0" X2="984"
+                  Y1="70" Y2="70"
+                  StrokeThickness="5"
+                  Stroke="{StaticResource tenthColor}"></Line>
+
+            <TextBlock Style="{StaticResource MyTextBlockStyle2}"
+                       Foreground="{StaticResource tenthColor}"
+                       Text="Select Cinema"
+                       FontSize="25" 
+                       Width="204"
+                       Canvas.Left="40" 
+                       Height="75" 
+                       Canvas.Top="106"/>
+            <ComboBox Style="{StaticResource comboBoxStyle7}"
+                      x:Name="CinemasCB"
+                      ItemsSource="{Binding AllCinemas}" 
+                      SelectedIndex="-1"
+                      Canvas.Left="45" 
+                      Canvas.Top="165"
+                      HorizontalAlignment="Center" 
+                      VerticalAlignment="Center"
+                      Width="194">
+                <ie:Interaction.Triggers>
+                    <ie:EventTrigger EventName="SelectionChanged">
+                        <ie:InvokeCommandAction Command="{Binding CinemaChangedCommand}"  CommandParameter="{Binding ElementName=CinemasCB, Path=SelectedItem}"/>
+                    </ie:EventTrigger>
+                </ie:Interaction.Triggers>
+            </ComboBox>
+
+            <TextBlock Style="{StaticResource MyTextBlockStyle2}"
+                       Foreground="{StaticResource tenthColor}"
+                       Text="Select Hall"
+                       FontSize="25" 
+                       Width="168"
+                       Canvas.Left="290"
+                       Height="75" 
+                       Canvas.Top="106" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+            <ComboBox Style="{StaticResource comboBoxStyle7}"
+                      x:Name="HallsCB"
+                      SelectedIndex="-1"
+                      Background="{StaticResource tenthColor}"
+                      ItemsSource="{Binding AllHalls}" 
+                      Canvas.Left="277"
+                      Canvas.Top="165" 
+                      HorizontalAlignment="Center"
+                      VerticalAlignment="Top" 
+                      Width="194">
+                <ie:Interaction.Triggers>
+                    <ie:EventTrigger EventName="SelectionChanged">
+                        <ie:InvokeCommandAction Command="{Binding HallChangedCommand}"  CommandParameter="{Binding ElementName=HallsCB, Path=SelectedItem}"/>
+                    </ie:EventTrigger>
+                </ie:Interaction.Triggers>
+            </ComboBox>
+
+
+            <TextBlock Style="{StaticResource MyTextBlockStyle2}"
+                       Foreground="{StaticResource tenthColor}"
+                       Text="Select Date"
+                       FontSize="25" 
+                       Width="170"
+                       Canvas.Left="524"
+                       Height="75" 
+                       Canvas.Top="106" VerticalAlignment="Top"/>
+            <ComboBox Style="{StaticResource comboBoxStyle7}"
+                      x:Name="DatesCB"
+                      Background="{StaticResource tenthColor}"
+                      ItemsSource="{Binding AllDates}" 
+                      SelectedIndex="-1"
+                      Canvas.Left="512" 
+                      Canvas.Top="165"
+                      Width="194"
+                      HorizontalAlignment="Left" 
+                      VerticalAlignment="Center">
+                <ie:Interaction.Triggers>
+                    <ie:EventTrigger EventName="SelectionChanged">
+                        <ie:InvokeCommandAction Command="{Binding DateChangedCommand}"  CommandParameter="{Binding ElementName=DatesCB, Path=SelectedItem}"/>
+                    </ie:EventTrigger>
+                </ie:Interaction.Triggers>
+            </ComboBox>
+
+            <TextBlock Style="{StaticResource MyTextBlockStyle2}"
+                Foreground="{StaticResource tenthColor}"
+                Text="Select Time"
+                FontSize="25" 
+                Width="172"
+                Canvas.Left="758"
+                Height="75" 
+                Canvas.Top="106" VerticalAlignment="Top"/>
+            <ComboBox Style="{StaticResource comboBoxStyle7}"
+                      x:Name="TimesCB"
+                      Background="{StaticResource tenthColor}"
+                      ItemsSource="{Binding AllTimes}" 
+                      Canvas.Left="747" 
+                      Canvas.Top="165"
+                      Width="194"
+                      SelectedIndex="-1"
+                      HorizontalAlignment="Left" 
+                      VerticalAlignment="Center">
+                <ie:Interaction.Triggers>
+                    <ie:EventTrigger EventName="SelectionChanged">
+                        <ie:InvokeCommandAction Command="{Binding TimeChangedCommand}"  CommandParameter="{Binding ElementName=TimesCB,Path=SelectedItem}"/>
+                    </ie:EventTrigger>
+                </ie:Interaction.Triggers>
+            </ComboBox>
+
+            <Label Height="45"
+                   Width="41"
+                   FontSize="30"
+                   Panel.ZIndex="1"
+                   Content="₼" Canvas.Left="548" Canvas.Top="257" HorizontalAlignment="Center" VerticalAlignment="Top">
+
+            </Label>
+
+            <TextBlock Style="{StaticResource MyTextBlockStyle2}"
+                Foreground="{StaticResource tenthColor}"
+                Text="Type Price"
+                FontSize="25" 
+                Width="160"
+                Canvas.Left="412"
+                Height="75" 
+                Canvas.Top="205"/>
+            <TextBox Style="{StaticResource MyTextBoxStyle3}"
+                     Background="{StaticResource ninthColor}"
+                     HorizontalAlignment="Center"
+                     Width="194"
+                     Padding="8"
+                     Text="{Binding Price, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
+                     MaxLength="8"
+                     Canvas.Left="395"  
+                     Canvas.Top="263"
+                     Height="40">
+                <ie:Interaction.Triggers>
+                    <i:EventTrigger EventName="PreviewTextInput" >
+                        <ei:CallMethodAction TargetObject="{Binding}" MethodName="IsAllowedInput"/>
+                    </i:EventTrigger>
+                </ie:Interaction.Triggers>
+            </TextBox>
+
+            <Border BorderBrush="{StaticResource tenthColor}"
+                    BorderThickness="2" 
+                    HorizontalAlignment="Left"
+                    Canvas.Top="355"
+                    Canvas.Left="-13" Height="137" Width="1013" VerticalAlignment="Center">
+                <Canvas>
+
+                    <Border BorderBrush="{StaticResource tenthColor}"
+                            BorderThickness="6" Panel.ZIndex="2" HorizontalAlignment="Left" Height="135" VerticalAlignment="Center" Width="9" Canvas.Left="995" Canvas.Top="-2">
+
+                    </Border>
+                    <local:MovieSessionUC x:Name="SessionUC" 
+                                      DataContext="{Binding MovieSessionViewModel}"
+                                      Height="133" 
+                                      Width="1191" 
+                                      Canvas.Left="10" 
+                                      HorizontalAlignment="Left" 
+                                      VerticalAlignment="Center"/>
+                </Canvas>
+            </Border>
+
+            <Button Style="{StaticResource MyButtonStyle2}"
+                    Background="{StaticResource tenthColor}" 
+                    Height="51" 
+                    Width="185" 
+                    Canvas.Left="787" 
+                    Canvas.Top="510"
+                    Content="Add Session"
+                    FontSize="24" 
+                    VerticalAlignment="Top"
+                    Command="{Binding AddSessionCommand}"/>
+        </Canvas>
+    </Grid>
+</UserControl>

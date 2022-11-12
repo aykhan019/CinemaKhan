@@ -1,0 +1,125 @@
+﻿<UserControl x:Class="CinemaPlus.Views.UserControls.MovieUC.ScheduleMovieUC"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:CinemaPlus.Views.UserControls.MovieUC"
+             mc:Ignorable="d" 
+             d:DesignHeight="70" 
+             d:DesignWidth="1300"
+             Height="70"
+             Width="1300"
+             Background="{DynamicResource firstColor}">
+    <Border BorderBrush="{StaticResource fourthColor}"
+            BorderThickness="0,0,0,1">
+        <Grid>
+            <Grid
+              Background="Transparent" Margin="0,0,1095,0">
+                <TextBlock Style="{StaticResource MyTextBlockStyle}"
+                       Text="{Binding Movie.Title}" 
+                       Width="194" 
+                       Margin="1,0,0,0"
+                       Cursor="Hand">
+                    <TextBlock.InputBindings>
+                        <MouseBinding Gesture="LeftClick" Command="{Binding MovieClickCommand}"></MouseBinding>
+                    </TextBlock.InputBindings>
+                </TextBlock>
+            </Grid>
+
+            <Grid Margin="233,0,977,0"
+              Background="Transparent">
+                <TextBlock Style="{StaticResource MyTextBlockStyle}"
+                       Foreground="{StaticResource fifthColor}"
+                       Text="{Binding SessionTime}" 
+                       Background="Transparent" 
+                           TextAlignment="Center"
+                       Margin="10,0,0,0" 
+                       Width="80"
+                       Cursor="IBeam"/>
+            </Grid>
+
+            <Grid Margin="380,0,755,0"
+              Background="Transparent">
+                <TextBlock Style="{StaticResource MyTextBlockStyle}"
+                       Text="{Binding Cinema}" 
+                       Width="150"
+                       Foreground="{StaticResource seventhColor}"
+                       Margin="25,0,0,0"
+                       Cursor="Hand">
+                </TextBlock>
+            </Grid>
+
+            <Grid Margin="560,0,525,0"
+              Background="Transparent">
+                <TextBlock Style="{StaticResource MyTextBlockStyle}"
+                       Text="{Binding Hall}" 
+                       Width="175"
+                       Foreground="{StaticResource fifthColor}"
+                       Margin="30,0,0,0"
+                       Cursor="IBeam">
+                </TextBlock>
+            </Grid>
+
+
+            <Grid Margin="785,0,375,0"
+                  Background="Transparent">
+                <StackPanel x:Name="DetailsStackPanel"
+                        Orientation="Horizontal" 
+                        Margin="0,-1,0,1">
+                </StackPanel>
+            </Grid>
+
+            <Grid Margin="970,0,190,0"
+              Background="Transparent">
+                <TextBlock Style="{StaticResource MyTextBlockStyle}"
+                       Text="{Binding Price}"
+                       Width="110"
+                       Foreground="{StaticResource fifthColor}"
+                       Cursor="IBeam"
+                       Margin="25,0,0,0"/>
+            </Grid>
+
+            <Grid Margin="1160,3,10,0"
+               RenderTransformOrigin="0.5,0.5">
+                <Border CornerRadius="2"
+                        Height="37"
+                        BorderThickness="1"
+                        BorderBrush="{StaticResource fourthColor}">
+                    <Button Background="Transparent"
+                        ClipToBounds="True"
+                        HorizontalAlignment="Center"
+                        VerticalAlignment="Center"
+                        BorderBrush="Transparent"
+                        FontFamily="\Fonts\#Ponder-Black"
+                        FontSize="30"
+                        FontWeight="Medium"
+                        Width="130"
+                        Style="{StaticResource MyButtonStyle1}"
+                        Foreground="{StaticResource fifthColor}"
+                        Height="37"
+                        Cursor="Hand"
+                        Command="{Binding PlacesCommand}">
+                        <StackPanel Orientation="Horizontal" 
+                                Width="125"
+                                Height="37">
+                            <TextBlock Foreground="Black"
+                                   FontSize="20"
+                                   VerticalAlignment="Center"
+                                   Margin="18,0,5,0"
+                                   FontWeight="Regular"
+                                   HorizontalAlignment="Left">
+                            Seats
+                            </TextBlock>
+                            <Image Height="23"
+                               Width="23"
+                               Source="\Images\seat.png"
+                               Margin="12,0,0,0">
+
+                            </Image>
+                        </StackPanel>
+                    </Button>
+                </Border>
+            </Grid>
+        </Grid>
+    </Border>
+</UserControl>

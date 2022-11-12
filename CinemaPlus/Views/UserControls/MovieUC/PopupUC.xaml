@@ -1,0 +1,35 @@
+﻿<UserControl x:Class="CinemaPlus.Views.UserControls.MovieUC.PopupUC"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:CinemaPlus.Views.UserControls.MovieUC"
+             mc:Ignorable="d" 
+             d:DesignHeight="54" 
+             d:DesignWidth="225">
+    <!--{Binding Path=ActualWidth, ElementName=PopupText}-->
+    <Grid>
+        <Path x:Name="Container"
+              Data="M257 82H1V20H117L129.5 1L143 20H257V82Z"
+              Fill="{DynamicResource firstColor}"
+              Height="54"
+              Width="225"
+              StrokeThickness="2"
+              Stroke="{DynamicResource secondColor}"
+              Stretch="Fill" HorizontalAlignment="Left"/>
+
+        <TextBlock x:Name="PopupText"
+                   FontSize="15"
+                   Width="Auto"
+                   Text="Movie language : english"
+                   FontWeight="Bold"
+                   Foreground="{DynamicResource secondColor}"
+                   TextAlignment="Center" 
+                   VerticalAlignment="Top"
+                   Panel.ZIndex="1"
+                   HorizontalAlignment="Center"
+                   Height="24"
+                   Margin="0,22,0,0">
+        </TextBlock>
+    </Grid>
+</UserControl>

@@ -1,0 +1,37 @@
+﻿<UserControl x:Class="CinemaPlus.Views.UserControls.HomePage.TariffsUC"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:CinemaPlus.Views.UserControls.HomePage" xmlns:endofpage="clr-namespace:CinemaPlus.Views.UserControls.EndOfPage"
+             mc:Ignorable="d" 
+             Height="940"
+             Width="1500"
+             d:DesignHeight="940" 
+             d:DesignWidth="1500"
+             Background="{DynamicResource firstColor}"
+             VerticalAlignment="Top"
+             HorizontalAlignment="Center">
+    <ScrollViewer HorizontalScrollBarVisibility="Disabled"
+                  VerticalScrollBarVisibility="Auto"
+                  Margin="19"
+                  x:Name="TariffsScroll">
+        <StackPanel Height="1800">
+            <Image Width="1172" Source="\Images\Tariffs.jpeg" Height="1566"/>
+            <Canvas Width="1688" Margin="0,-20,0,0">
+                <Image Source="\Images\sides.png" Height="190" Canvas.Left="73.6" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+                <endofpage:EndingUC x:Name="TariffsEndingView" HorizontalAlignment="Left" Canvas.Left="105" VerticalAlignment="Center"/>
+                <Image Source="\Images\sides2.png" Height="190" Stretch="Fill" RenderTransformOrigin="0.5,0.5" Width="21" Canvas.Left="1369" HorizontalAlignment="Left" VerticalAlignment="Center">
+                    <Image.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform/>
+                            <SkewTransform AngleX="0.474"/>
+                            <RotateTransform Angle="180" />
+                            <TranslateTransform X="0.992"/>
+                        </TransformGroup>
+                    </Image.RenderTransform>
+                </Image>
+            </Canvas>
+        </StackPanel>
+    </ScrollViewer>
+</UserControl>

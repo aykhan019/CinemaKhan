@@ -1,0 +1,37 @@
+﻿<UserControl x:Class="CinemaPlus.Views.UserControls.AdminSide.PurchasedTicketsUC"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:CinemaPlus.Views.UserControls.AdminSide"
+             mc:Ignorable="d" 
+             Height="763"
+             Width="1500"
+             d:DesignHeight="763"
+             d:DesignWidth="1500">
+    <Grid Background="{StaticResource firstColor}">
+        <Border BorderBrush="{StaticResource tenthColor}"
+                    BorderThickness="3" Margin="414,30,414,643">
+            <TextBlock Text="Purchased Tickets"
+                       FontSize="60"
+                       TextAlignment="Center">
+
+            </TextBlock>
+        </Border>
+
+        <Border BorderBrush="{StaticResource tenthColor}"
+                BorderThickness="0,3,0,0" Margin="0,140,0,0">
+            <ScrollViewer     VerticalScrollBarVisibility="Auto"
+                          HorizontalScrollBarVisibility="Disabled"
+                          Width="1500"
+                          Name ="PurchasedTicketsUCScrollViewer"
+                          HorizontalAlignment="Center" Margin="0,7,0,-92">
+
+                <WrapPanel Name="PurchasedTicketsWrapPanel"
+                           Width="1310">
+
+                </WrapPanel>
+            </ScrollViewer>
+        </Border>
+    </Grid>
+</UserControl>

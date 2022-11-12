@@ -1,0 +1,159 @@
+﻿<UserControl x:Class="CinemaPlus.ViewModels.Movie.MovieCellUC"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:CinemaPlus.ViewModels.Movie"
+             mc:Ignorable="d" 
+             Height="580"
+             Width="276"
+             d:DesignHeight="580" 
+             d:DesignWidth="276"
+             Margin="20,30,20,30"
+             Background="{DynamicResource firstColor}">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="473"></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+
+        <Grid Grid.Row="0">
+            <StackPanel Height="473"
+                        Width="276"
+                        VerticalAlignment="Top"
+                        Cursor="Hand">
+                <StackPanel.Triggers>
+                    <EventTrigger RoutedEvent="MouseEnter">
+                        <EventTrigger.Actions>
+                            <BeginStoryboard>
+                                <Storyboard x:Name="TitleTextBoxMouseOverSB">
+                                    <ColorAnimation To="#1D429A" 
+                                                    x:Name="BackgroundColorAnimationOfTbInMouseOver"
+                                    Storyboard.TargetName="titleTextBlock"
+                                    Storyboard.TargetProperty="(TextBlock.Background).(SolidColorBrush.Color)" 
+                                    FillBehavior="HoldEnd" 
+                                    Duration="0:0:0.4"/>
+                                    <ColorAnimation To="#FFFFFF" 
+                                                    x:Name="ForegroundColorAnimationOfTbInMouseOver"
+                                    Storyboard.TargetName="titleTextBlock"
+                                    Storyboard.TargetProperty="(TextBlock.Foreground).(SolidColorBrush.Color)" 
+                                    FillBehavior="HoldEnd"
+                                    BeginTime="0:0:0.001"
+                                    Duration="0:0:0.4"/>
+                                </Storyboard>
+                            </BeginStoryboard>
+                        </EventTrigger.Actions>
+                    </EventTrigger>
+                    <EventTrigger RoutedEvent="TextBlock.MouseLeave">
+                        <BeginStoryboard>
+                            <Storyboard x:Name="TitleTextBoxMouseLeaveSB">
+                                <ColorAnimation To="#FFFFFF" 
+                                                x:Name="BackgroundColorAnimationOfTbInMouseLeave"
+                                    Storyboard.TargetName="titleTextBlock"      
+                                    Storyboard.TargetProperty="(TextBlock.Background).(SolidColorBrush.Color)" 
+                                    FillBehavior="HoldEnd" 
+                                    Duration="0:0:0.4"/>
+                                <ColorAnimation To="#000000" 
+                                                x:Name="ForegroundColorAnimationOfTbInMouseLeave"
+                                    Storyboard.TargetName="titleTextBlock"
+                                    Storyboard.TargetProperty="(TextBlock.Foreground).(SolidColorBrush.Color)" 
+                                    FillBehavior="HoldEnd"
+                                    BeginTime="0:0:0.01"
+                                    Duration="0:0:0.1"/>
+                            </Storyboard>
+                        </BeginStoryboard>
+                    </EventTrigger>
+
+                    <EventTrigger RoutedEvent="Image.MouseEnter">
+                        <BeginStoryboard>
+                            <Storyboard>
+                                <DoubleAnimationUsingKeyFrames
+                                Storyboard.TargetProperty="(FrameworkElement.Height)" 
+                                Storyboard.TargetName="Image">
+                                    <EasingDoubleKeyFrame KeyTime="0:0:0.3" Value="472"/>
+                                </DoubleAnimationUsingKeyFrames>
+                                <DoubleAnimationUsingKeyFrames
+                                Storyboard.TargetProperty="(FrameworkElement.Width)" 
+                                Storyboard.TargetName="Image">
+                                    <EasingDoubleKeyFrame KeyTime="0:0:0.3" Value="326"/>
+                                </DoubleAnimationUsingKeyFrames>
+                            </Storyboard>
+                        </BeginStoryboard>
+                    </EventTrigger>
+
+                    <EventTrigger RoutedEvent="Image.MouseLeave">
+                        <BeginStoryboard>
+                            <Storyboard>
+                                <DoubleAnimationUsingKeyFrames
+                                Storyboard.TargetProperty="(FrameworkElement.Height)" 
+                                Storyboard.TargetName="Image">
+                                    <EasingDoubleKeyFrame KeyTime="0:0:0.3" Value="412"/>
+                                </DoubleAnimationUsingKeyFrames>
+                                <DoubleAnimationUsingKeyFrames
+                                Storyboard.TargetProperty="(FrameworkElement.Width)" 
+                                Storyboard.TargetName="Image">
+                                    <EasingDoubleKeyFrame KeyTime="0:0:0.3" Value="276"/>
+                                </DoubleAnimationUsingKeyFrames>
+                            </Storyboard>
+                        </BeginStoryboard>
+                    </EventTrigger>
+
+                </StackPanel.Triggers>
+                <Border BorderBrush="{x:Null}" Height="60">
+                    <TextBlock Text="{Binding Movie.Title, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
+                           Width="276" 
+                           Height="64" 
+                           Background="White"
+                           Padding="0,12,0,0"
+                           Name="titleTextBlock"
+                           FontFamily="\Fonts\#Ponder-Black"
+                           FontWeight="Medium"
+                           FontSize="20"
+                           VerticalAlignment="Center"
+                           HorizontalAlignment="Center"
+                           TextAlignment="Center"
+                           TextWrapping="Wrap"
+                           Margin="0,-1,0,-1">
+                    </TextBlock>
+                </Border>
+                <Image Margin="0" 
+                   x:Name="Image" 
+                   Source="{Binding PosterImageSource, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
+                   Width="276" 
+                   Height="412" 
+                   Stretch="Fill"
+                   HorizontalAlignment="Center"
+                   VerticalAlignment="Center">
+                </Image>
+
+                <StackPanel.InputBindings>
+                    <MouseBinding Gesture="LeftClick" Command="{Binding MovieClickCommand}"></MouseBinding>
+                </StackPanel.InputBindings>
+            </StackPanel>
+        </Grid>
+
+        <Grid Grid.Row="1" HorizontalAlignment="Center">
+            <Canvas Width="276" 
+                    HorizontalAlignment="Center"
+                    Name="Canvas">
+                <StackPanel Background="Transparent"
+                            Width="175"
+                            Height="56"
+                            Name="MovieDetailsStackPanel"
+                            Orientation="Horizontal" 
+                            HorizontalAlignment="Left"
+                            VerticalAlignment="Center" 
+                            Canvas.Left="68">
+                </StackPanel>
+                <Button Style="{StaticResource MyButtonStyle3}"
+                        Command="{Binding SessionsCommand}"
+                        Height="40"
+                        Width="110"
+                        HorizontalContentAlignment="Center"
+                        Canvas.Left="83">
+                    SESSIONS
+                </Button>
+            </Canvas>
+        </Grid>
+    </Grid>
+</UserControl>

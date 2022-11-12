@@ -1,0 +1,158 @@
+﻿<UserControl x:Class="CinemaPlus.Views.UserControls.AdminSide.EditMovieMainTabUC"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-name
+             space:CinemaPlus.Views.UserControls.AdminSide"
+             xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity" 
+             xmlns:ei="http://schemas.microsoft.com/expression/2010/interactions"
+             xmlns:ie="http://schemas.microsoft.com/expression/2010/interactivity"
+             mc:Ignorable="d" 
+             d:DesignHeight="571" 
+             d:DesignWidth="974"
+             Height="571"
+             Width="974">
+    <Grid Background="{DynamicResource firstColor}">
+        <Canvas Margin="21,25,-21,-25" x:Name="Canvas">
+
+            <TextBlock Style="{StaticResource MyTextBlockStyle2}" Text="Title" FontSize="20" Foreground="{StaticResource fifthColor}" Canvas.Left="15" Canvas.Top="-19" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+            <TextBox Text="{Binding Title, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}" Style="{StaticResource MyTextBoxStyle3}" Width="365" Canvas.Left="25" Canvas.Top="25" Height="43" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+
+            <TextBlock Style="{StaticResource MyTextBlockStyle2}" Text="Year" FontSize="20" Foreground="{StaticResource fifthColor}" Canvas.Left="15" Canvas.Top="53" HorizontalAlignment="Center"/>
+            <TextBox Text="{Binding Year, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}" MaxLength="4" Style="{StaticResource MyTextBoxStyle3}" Width="365" Canvas.Left="25" Canvas.Top="97" Height="43" HorizontalAlignment="Center" VerticalAlignment="Top">
+                <i:Interaction.Triggers>
+                    <i:EventTrigger EventName="PreviewTextInput">
+                        <ei:CallMethodAction TargetObject="{Binding}" MethodName="IsAllowedInput"/>
+                    </i:EventTrigger>
+                </i:Interaction.Triggers>
+            </TextBox>
+
+            <TextBlock Style="{StaticResource MyTextBlockStyle2}" Text="Released" FontSize="20" Foreground="{StaticResource fifthColor}" Canvas.Left="15" Canvas.Top="125" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+            <TextBox Text="{Binding Released, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}" Style="{StaticResource MyTextBoxStyle3}" Width="365" Canvas.Left="25" Canvas.Top="169" Height="43" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+
+            <TextBlock Style="{StaticResource MyTextBlockStyle2}" Text="Genre" FontSize="20" Foreground="{StaticResource fifthColor}" Canvas.Left="15" Canvas.Top="197" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+            <TextBox Text="{Binding Genre, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}" Style="{StaticResource MyTextBoxStyle3}" Width="365" Canvas.Left="25" Canvas.Top="241" Height="43" HorizontalAlignment="Center" VerticalAlignment="Top"></TextBox>
+
+            <TextBlock Style="{StaticResource MyTextBlockStyle2}" Text="Director" FontSize="20" Foreground="{StaticResource fifthColor}" Canvas.Left="15" Canvas.Top="269" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+            <TextBox Text="{Binding Director, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}" Style="{StaticResource MyTextBoxStyle3}" Width="365" Canvas.Left="25" Canvas.Top="313" Height="44" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+
+            <TextBlock Style="{StaticResource MyTextBlockStyle2}" Text="Writer" FontSize="20" Foreground="{StaticResource fifthColor}" Canvas.Left="15" Canvas.Top="341" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+            <TextBox Text="{Binding Writer, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}" Style="{StaticResource MyTextBoxStyle3}" Width="365" Canvas.Left="25" Canvas.Top="385" Height="44" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+
+            <TextBlock Style="{StaticResource MyTextBlockStyle2}" Text="Actors" FontSize="20" Foreground="{StaticResource fifthColor}" Canvas.Left="15" Canvas.Top="413" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+            <TextBox Text="{Binding Actors, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}" Style="{StaticResource MyTextBoxStyle3}" Width="365" Canvas.Left="25" Canvas.Top="457" Height="44" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+
+            <TextBlock Style="{StaticResource MyTextBlockStyle2}" Text="Awards" FontSize="20" Foreground="{StaticResource fifthColor}" Canvas.Left="484" Canvas.Top="-19"/>
+            <TextBox Text="{Binding Awards, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}" Style="{StaticResource MyTextBoxStyle3}" Width="365" Canvas.Left="494" Canvas.Top="25" Height="43" HorizontalAlignment="Center"/>
+
+            <TextBox MaxLength="10" Style="{StaticResource MyTextBoxStyle3}" Text="{Binding Runtime, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}" x:Name="runtimeTb" Canvas.Left="494" HorizontalAlignment="Center" Width="365" Canvas.Top="170" Height="42">
+                <i:Interaction.Triggers>
+                    <i:EventTrigger EventName="PreviewTextInput">
+                        <ei:CallMethodAction TargetObject="{Binding}" MethodName="IsAllowedInput"/>
+                    </i:EventTrigger>
+                </i:Interaction.Triggers>
+            </TextBox>
+            <Border>
+                <Grid>
+                    <Border BorderThickness="1"
+                            Height="41"
+                            x:Name="border1"
+                            Background="{StaticResource fifthColor}"
+                            Width="60"
+                            CornerRadius="0,4,4,0"
+                            BorderBrush="{StaticResource fifthColor}" Margin="799,170,-460,-173">
+                        <Canvas x:Name="canvas2">
+                            <Button x:Name="upButton1" BorderBrush="{StaticResource fifthColor}" BorderThickness="10"  Style="{StaticResource MyButtonStyle8}" Background="{StaticResource tenthColor}"  Width="58" Height="19.5" HorizontalAlignment="Left">
+                                <Button.InputBindings>
+                                    <MouseBinding Gesture="LeftClick" Command="{Binding UpCommand}" CommandParameter="{Binding ElementName=runtimeTb}"/>
+                                </Button.InputBindings>
+                                <Image x:Name="image1" Source="/Images/arrow_up.png" Width="29" Stretch="Uniform" VerticalAlignment="Center" HorizontalAlignment="Center" Height="23" />
+                            </Button>
+                            <Button x:Name="downButton1" Style="{StaticResource MyButtonStyle7}" Background="{StaticResource tenthColor}" BorderBrush="Transparent" Width="58" Height="19" Canvas.Top="21" VerticalAlignment="Top">
+                                <Button.InputBindings>
+                                    <MouseBinding Gesture="LeftClick" Command="{Binding DownCommand}" CommandParameter="{Binding ElementName=runtimeTb}"/>
+                                </Button.InputBindings>
+                                <Image x:Name="image2" Source="/Images/arrow_down.png" Width="29" Stretch="Uniform" VerticalAlignment="Center" HorizontalAlignment="Center" Height="23" />
+                            </Button>
+                        </Canvas>
+                    </Border>
+                </Grid>
+            </Border>
+            <TextBlock Style="{StaticResource MyTextBlockStyle2}" Text="Subtitle" FontSize="20" Foreground="{StaticResource fifthColor}" Canvas.Left="484" Canvas.Top="341" VerticalAlignment="Top" HorizontalAlignment="Center"/>
+            <Viewbox Canvas.Left="490" Canvas.Top="390">
+                <StackPanel Width="301" Orientation="Horizontal">
+
+                    <RadioButton x:Name="rb1" Style="{StaticResource SquareRadioButton}" FontWeight="Medium" FontSize="18" IsChecked="{Binding AzerbaijaniIsChecked, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}" Margin="10,4">Azerbaijani</RadioButton>
+                    <RadioButton x:Name="rb2" Style="{StaticResource SquareRadioButton}" FontWeight="Medium" FontSize="18" IsChecked="{Binding TurkishIsChecked, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}"  Margin="10, 4">Turkish</RadioButton>
+
+                </StackPanel>
+            </Viewbox>
+
+            <ComboBox FontWeight="Medium" Cursor="Hand" Style="{StaticResource comboBoxStyle5}" SelectedIndex="{Binding CountriesCBSelectedIndex,UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}" MaxDropDownHeight="Auto" ItemsSource="{Binding Countries, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Canvas.Left="494" Canvas.Top="97" HorizontalAlignment="Center" VerticalAlignment="Top" Width="175"></ComboBox>
+            <ComboBox Cursor="Hand" Style="{StaticResource comboBoxStyle5}"  SelectedIndex="{Binding LanguagesCBSelectedIndex,UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}" MaxDropDownHeight="Auto"  ItemsSource="{Binding Languages, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Canvas.Left="684" Canvas.Top="97" Width="175" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+            <TextBlock Style="{StaticResource MyTextBlockStyle2}" Text="Country" FontSize="20" Foreground="{StaticResource fifthColor}" Canvas.Left="484" Canvas.Top="53" VerticalAlignment="Top" HorizontalAlignment="Center"/>
+            <TextBlock Style="{StaticResource MyTextBlockStyle2}" Text="Language" FontSize="20" Foreground="{StaticResource fifthColor}" Canvas.Left="676" Canvas.Top="53" VerticalAlignment="Top" HorizontalAlignment="Center"/>
+
+
+            <TextBlock Style="{StaticResource MyTextBlockStyle2}" Text="Runtime" FontSize="20" Foreground="{StaticResource fifthColor}" Canvas.Left="484" Canvas.Top="125" VerticalAlignment="Top"/>
+            <TextBox IsEnabled="False" Style="{StaticResource MyTextBoxStyle3}" Text="{Binding ImdbRating, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}" x:Name="IMDbTb" Canvas.Left="494" HorizontalAlignment="Center" Width="365" Canvas.Top="242" Height="42" VerticalAlignment="Center"/>
+            <Border>
+                <Grid>
+                    <Border BorderThickness="1"
+                            Height="41"
+                            Background="{StaticResource fifthColor}"
+                            Width="60"
+                            x:Name="border2"
+                            CornerRadius="0,4,4,0"
+                            BorderBrush="{StaticResource fifthColor}" Margin="799,242,-460,-245">
+                        <Canvas x:Name="canvas3">
+                            <Button x:Name="upButton2"  BorderBrush="{StaticResource fifthColor}" BorderThickness="10"  Style="{StaticResource MyButtonStyle8}" Background="{StaticResource tenthColor}"  Width="58" Height="19.5" HorizontalAlignment="Left">
+                                <Button.InputBindings>
+                                    <MouseBinding Gesture="LeftClick" Command="{Binding IMDbUpCommand}" CommandParameter="{Binding ElementName=IMDbTb}"/>
+                                </Button.InputBindings>
+                                <Image x:Name="image3" Source="/Images/arrow_up.png" Width="29" Stretch="Uniform" VerticalAlignment="Center" HorizontalAlignment="Center" Height="23" />
+                            </Button>
+                            <Button x:Name="downButton2" Style="{StaticResource MyButtonStyle7}" Background="{StaticResource tenthColor}" BorderBrush="Transparent"  Width="58" Height="19" Canvas.Top="21" VerticalAlignment="Top">
+                                <Button.InputBindings>
+                                    <MouseBinding Gesture="LeftClick" Command="{Binding IMDbDownCommand}" CommandParameter="{Binding ElementName=IMDbTb}"/>
+                                </Button.InputBindings>
+                                <Image x:Name="image4" Source="/Images/arrow_down.png" Width="29" Stretch="Uniform" VerticalAlignment="Center" HorizontalAlignment="Center" Height="23" />
+                            </Button>
+                        </Canvas>
+                    </Border>
+                </Grid>
+            </Border>
+            <TextBlock Style="{StaticResource MyTextBlockStyle2}" Text="IMDb Rating" FontSize="20" Foreground="{StaticResource fifthColor}" Canvas.Left="484" Canvas.Top="197" VerticalAlignment="Top"/>
+
+            <TextBlock Style="{StaticResource MyTextBlockStyle2}" Text="Default Price" FontSize="20" Foreground="{StaticResource fifthColor}" Canvas.Left="484" Canvas.Top="269" Width="185"/>
+            <TextBox  IsEnabled="False" Style="{StaticResource MyTextBoxStyle3}" Text="{Binding Price, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}" x:Name="priceTb" Canvas.Left="494" HorizontalAlignment="Center" Width="365" Canvas.Top="314" Height="42"></TextBox>
+            <Border>
+                <Grid>
+                    <Border BorderThickness="1"
+                            Height="41"
+                            Background="{StaticResource fifthColor}"
+                            Width="60"
+                            x:Name="border3"
+                            CornerRadius="0,4,4,0"
+                            BorderBrush="{StaticResource fifthColor}" Margin="799,314,-460,-317">
+                        <Canvas x:Name="canvas4">
+                            <Button x:Name="upButton3" BorderBrush="{StaticResource fifthColor}" BorderThickness="10"  Style="{StaticResource MyButtonStyle8}" Background="{StaticResource tenthColor}" Width="58" Height="19.5" HorizontalAlignment="Left">
+                                <Button.InputBindings>
+                                    <MouseBinding Gesture="LeftClick" Command="{Binding UpCommand}" CommandParameter="{Binding ElementName=priceTb}"/>
+                                </Button.InputBindings>
+                                <Image x:Name="image5" Source="/Images/arrow_up.png" Width="29" Stretch="Uniform" VerticalAlignment="Center" HorizontalAlignment="Center" Height="23" />
+                            </Button>
+                            <Button x:Name="downButton3" Style="{StaticResource MyButtonStyle7}" Background="{StaticResource tenthColor}" BorderBrush="Transparent"  Width="58" Height="19" Canvas.Top="21" VerticalAlignment="Top">
+                                <Button.InputBindings>
+                                    <MouseBinding Gesture="LeftClick" Command="{Binding DownCommand}" CommandParameter="{Binding ElementName=priceTb}"/>
+                                </Button.InputBindings>
+                                <Image x:Name="image6" Source="/Images/arrow_down.png" Width="29" Stretch="Uniform" VerticalAlignment="Center" HorizontalAlignment="Center" Height="23" />
+                            </Button>
+                        </Canvas>
+                    </Border>
+                </Grid>
+            </Border>
+        </Canvas>
+    </Grid>
+</UserControl>

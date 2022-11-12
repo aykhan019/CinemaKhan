@@ -1,0 +1,86 @@
+﻿    <UserControl x:Class="CinemaPlus.Views.UserControls.HomePage.FaqUC"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:CinemaPlus.Views.UserControls.HomePage" xmlns:endofpage="clr-namespace:CinemaPlus.Views.UserControls.EndOfPage"
+             mc:Ignorable="d" 
+Height="940"
+             Width="1500"
+             d:DesignHeight="940" 
+             d:DesignWidth="1500"
+             Background="{DynamicResource firstColor}"
+             VerticalAlignment="Top"
+             HorizontalAlignment="Center">
+    <ScrollViewer HorizontalScrollBarVisibility="Disabled"
+                  VerticalScrollBarVisibility="Auto"
+                  Margin="19"
+                  x:Name="FaqScroll">
+        <StackPanel Height="1800">
+            <Viewbox Margin="120,0,120,70">
+                <StackPanel Orientation="Vertical" Width="400">
+
+                    <TextBlock Style="{StaticResource MyTextBlockStyle2}" Height="12" Padding="0" FontSize="10" Width="63" Margin="6,8,0,0">FAQ</TextBlock>
+                    <Line Stroke="{StaticResource fourthColor}" StrokeThickness="0.3" Margin="0,0,0,8" X1="0" Y1="8" X2="1500" Y2="8"></Line>
+
+                    <TextBlock Style="{StaticResource MyTextBlockStyle2}" FontSize="9" Height="10" Padding="0" Cursor="IBeam">+What is Dolby Atmos?</TextBlock>
+                    <TextBlock TextWrapping="Wrap" Margin="7,3,0 8" FontSize="8" Foreground="{StaticResource fourthColor}" Cursor="IBeam">Dolby brings Atmos sound effects in the new plane, allowing the viewer to experience not only the direction but also the vertical position of the sound source. Thus, the sound of rain really is coming from the ceiling, and from the oncoming train shakes the floor. The halls of the United network "CinemaPlus" became the first Azerbaijani to installing Dolby Atmos.Read more at our site</TextBlock>
+
+                    <TextBlock Style="{StaticResource MyTextBlockStyle2}" FontSize="9" Height="10" Padding="0" Cursor="IBeam" Width="282">+What if my age does not meet the age restrictions of the film?</TextBlock>
+                    <TextBlock TextWrapping="Wrap" Margin="7,3,0 8" FontSize="8" Foreground="{StaticResource fourthColor}" Cursor="IBeam">The cashiers have a right not to let You or not to sell the ticket. At the movies category of 12+ by law, children older than 6 years have a right to come, but only when accompanied by parents!</TextBlock>
+
+                    <TextBlock Style="{StaticResource MyTextBlockStyle2}" FontSize="9" Height="10" Padding="0" Cursor="IBeam" Width="246">+Loved the movie poster, is it possible to pick it up?</TextBlock>
+                    <TextBlock TextWrapping="Wrap" Margin="7,3,0 8" FontSize="8" Foreground="{StaticResource fourthColor}" Cursor="IBeam">Perhaps if it stays in stock. To pick up the poster, You need to contact the administrator of the theater, you are sure to help!</TextBlock>
+
+
+                    <TextBlock Style="{StaticResource MyTextBlockStyle2}" FontSize="9" Height="10" Padding="0" Cursor="IBeam">+Do you have a loyalty program?</TextBlock>
+                    <TextBlock TextWrapping="Wrap" Margin="7,3,0 8" FontSize="8" Foreground="{StaticResource fourthColor}" Cursor="IBeam">We have a programme of bonus cards "CineClub".</TextBlock>
+
+
+                    <TextBlock Style="{StaticResource MyTextBlockStyle2}" FontSize="9" Height="10" Padding="0" Cursor="IBeam">+How much is the ticket?</TextBlock>
+                    <TextBlock TextWrapping="Wrap" Margin="7,3,0 8" FontSize="8" Foreground="{StaticResource fourthColor}" Cursor="IBeam">The ticket price depends on the cinema format, time and day of the week. All prices in the schedule are relevant to know the price of the ticket, you need to choose for your film, format, day and time.</TextBlock>
+
+
+                    <TextBlock Style="{StaticResource MyTextBlockStyle2}" FontSize="9" Height="10" Padding="0" Cursor="IBeam" Width="392">+What movies will come tomorrow/day after tomorrow/next week? The site has no schedule!</TextBlock>
+                    <TextBlock TextWrapping="Wrap" Margin="7,3,0 8" FontSize="8" Foreground="{StaticResource fourthColor}" Cursor="IBeam">Wait, it is sure to appear! Usually, the schedule is updated in the environment in the course of the day.</TextBlock>
+
+
+                    <TextBlock Style="{StaticResource MyTextBlockStyle2}" FontSize="9" Height="10" Padding="0" Cursor="IBeam">+What are movies?</TextBlock>
+                    <TextBlock TextWrapping="Wrap" Margin="7,3,0 8" FontSize="8" Foreground="{StaticResource fourthColor}" Cursor="IBeam">Information is on our website: http://www.cinemaplus.az</TextBlock>
+
+
+                    <TextBlock Style="{StaticResource MyTextBlockStyle2}" FontSize="9" Height="10" Padding="0" Cursor="IBeam" Width="342">+Is it possible the child or young person to go to an adult movie?</TextBlock>
+                    <TextBlock TextWrapping="Wrap" Margin="7,3,0 8" FontSize="8" Foreground="{StaticResource fourthColor}" Cursor="IBeam">You can go to the film unless accompanied by parents.</TextBlock>
+
+
+                    <TextBlock Style="{StaticResource MyTextBlockStyle2}" FontSize="9" Height="22" Padding="0" Cursor="IBeam" Width="381" TextWrapping="Wrap">+What are the promotions currently active in the network of cinema CinemaKhan? Are there any discounts?</TextBlock>
+                    <TextBlock TextWrapping="Wrap" Margin="7,3,0 8" FontSize="8" Foreground="{StaticResource fourthColor}" Cursor="IBeam">With all of our promotions and discounts can be found on our site</TextBlock>
+
+
+                    <TextBlock Style="{StaticResource MyTextBlockStyle2}" FontSize="9" Height="10" Padding="0" Cursor="IBeam" Width="376">+Not able to buy online ticket on the website, and now the seats are occupied, what to do?</TextBlock>
+                    <TextBlock TextWrapping="Wrap" Margin="7,3,0 8" FontSize="8" Foreground="{StaticResource fourthColor}" Cursor="IBeam">After 8 minutes they come back on sale automatically. You can wait or buy other places nearby.</TextBlock>
+
+
+                    <TextBlock Style="{StaticResource MyTextBlockStyle2}" FontSize="9" Height="10" Padding="0" Cursor="IBeam">+Feedback</TextBlock>
+                    <TextBlock TextWrapping="Wrap" Margin="7,3,0 8" FontSize="8" Foreground="{StaticResource fourthColor}" Cursor="IBeam">All of Your feedback with the wishes, comments and suggestions regarding the operation of cinemas and the network as a whole, You can send them to my email cinemakhan.cinema@gmail.com . Each appeal will be processed in the shortest possible time and taken into account.</TextBlock>
+                    
+                </StackPanel>
+            </Viewbox>
+
+            <Canvas Width="1688">
+                <Image Source="\Images\sides.png" Height="190" Canvas.Left="73.6" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+                <endofpage:EndingUC x:Name="FaqEndingView" HorizontalAlignment="Left" Canvas.Left="105" VerticalAlignment="Center"/>
+                <Image Source="\Images\sides2.png" Height="190" Stretch="Fill" RenderTransformOrigin="0.5,0.5" Width="57" Canvas.Left="1369.3" HorizontalAlignment="Left" VerticalAlignment="Center">
+                    <Image.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform/>
+                            <SkewTransform AngleX="0.474"/>
+                            <RotateTransform Angle="180" />
+                            <TranslateTransform X="0.992"/>
+                        </TransformGroup>
+                    </Image.RenderTransform>
+                </Image>
+            </Canvas>
+        </StackPanel>
+    </ScrollViewer>
+</UserControl>

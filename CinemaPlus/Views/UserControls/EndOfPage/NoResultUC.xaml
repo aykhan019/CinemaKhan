@@ -1,0 +1,24 @@
+﻿<UserControl x:Class="CinemaPlus.Views.UserControls.EndOfPage.NoResultUC"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:CinemaPlus.Views.UserControls.EndOfPage"
+             mc:Ignorable="d" 
+             d:DesignHeight="190"
+             d:DesignWidth="1300"
+             Height="90"
+             Width="1275"
+             Background="{DynamicResource firstColor}">
+    <Grid>
+        <TextBlock TextAlignment="Center"
+                   FontFamily="\Fonts\#Ponder-Black"
+                   FontSize="19"
+                   Width="Auto"
+                   HorizontalAlignment="Center"
+                   FontWeight="Medium"
+                   VerticalAlignment="Center"
+                   Text="{Binding Text, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}">
+        </TextBlock>
+    </Grid>
+</UserControl>

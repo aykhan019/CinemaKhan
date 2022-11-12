@@ -1,0 +1,70 @@
+﻿<UserControl x:Class="CinemaPlus.Views.UserControls.AdminSide.EditMoviePosterTabUC"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:CinemaPlus.Views.UserControls.AdminSide" xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity" xmlns:ei="http://schemas.microsoft.com/expression/2010/interactions"
+             mc:Ignorable="d" 
+             d:DesignHeight="571" 
+             d:DesignWidth="974"
+             Height="571"
+             Width="974">
+    <Grid Background="{DynamicResource firstColor}">
+        <Canvas AllowDrop="True" x:Name="Canvas">
+            <Rectangle StrokeDashArray="4"
+                   StrokeThickness="2"
+                   Height="452"
+                   Width="314"
+                   x:Name="MovieImage"
+                   Stroke="{StaticResource tenthColor}" Canvas.Left="35" Canvas.Top="62" HorizontalAlignment="Left" VerticalAlignment="Center">
+                <Rectangle.Fill>
+                    <ImageBrush ImageSource="{Binding ImageSource, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Stretch="Fill"></ImageBrush>
+                </Rectangle.Fill>
+            </Rectangle>
+
+            <Rectangle StrokeDashArray="10"
+                       StrokeThickness="2"
+                       x:Name="DragDropRectangle"
+                       Fill="WhiteSmoke"
+                       StrokeDashCap="Round"
+                       RadiusX="10"
+                       AllowDrop="True"
+                       RadiusY="10"
+                       Height="280"
+                       Width="568"
+                       Stroke="{StaticResource tenthColor}" 
+                       Canvas.Left="378" 
+                       Canvas.Top="146" 
+                       HorizontalAlignment="Left" 
+                       VerticalAlignment="Top">
+                <i:Interaction.Triggers>
+                    <i:EventTrigger EventName="Drop">
+                        <ei:CallMethodAction TargetObject="{Binding}" MethodName="DropEvent"/>
+                    </i:EventTrigger>
+                </i:Interaction.Triggers>
+            </Rectangle>
+
+            <Image x:Name="Image" Source="\Images\dragFileIcon.jpeg" IsHitTestVisible="False" Height="90" Width="120" Canvas.Left="602" Canvas.Top="224" HorizontalAlignment="Center" VerticalAlignment="Center"></Image>
+
+            <TextBlock Style="{StaticResource MyTextBlockStyle}"
+                       Text="Drag files to upload" 
+                       Canvas.Left="560" 
+                       Canvas.Top="319"
+                       x:Name="DragTextBlock"
+                       IsHitTestVisible="False"
+                       Foreground="{StaticResource tenthColor}"
+                       FontSize="22" Width="204" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+
+
+            <Button Style="{StaticResource MyButtonStyle2}" 
+                    Canvas.Left="592"
+                    Canvas.Top="462" 
+                    Height="52"
+                    x:Name="ChooseFileButton"
+                    Background="{StaticResource fourthColor}"
+                    Content="Choose File"
+                    Command="{Binding ChooseFileCommand}"
+                    FontSize="19"/>
+        </Canvas>
+    </Grid>
+</UserControl>

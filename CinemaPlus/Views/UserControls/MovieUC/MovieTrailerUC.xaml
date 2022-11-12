@@ -1,0 +1,21 @@
+﻿<UserControl x:Class="CinemaPlus.Views.UserControls.MovieUC.MovieTrailerUC"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:CinemaPlus.Views.UserControls.MovieUC" xmlns:wpf="clr-namespace:Microsoft.Web.WebView2.Wpf;assembly=Microsoft.Web.WebView2.Wpf"
+             mc:Ignorable="d" 
+             Height="763"
+             Width="1500"
+             d:DesignHeight="763"
+             d:DesignWidth="1500">
+    <Grid Background="{DynamicResource firstColor}">
+
+        <wpf:WebView2 x:Name="Web"
+                      Source="https://www.youtube.com">
+
+        </wpf:WebView2>
+        <Grid Background="Transparent" ></Grid>
+    </Grid>
+</UserControl>
+    

@@ -1,0 +1,49 @@
+﻿<UserControl x:Class="CinemaPlus.Views.UserControls.HeadOfHome.ScheduleHeadUC"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:CinemaPlus.Views.UserControls.HeadOfHome"
+             mc:Ignorable="d" 
+             d:DesignHeight="90" 
+             d:DesignWidth="1500"
+             Height="90"
+             Width="1500"
+             Background="{DynamicResource firstColor}">
+    <Grid>
+        <Border BorderThickness="0,0,0,1.5"
+                BorderBrush ="{StaticResource seventhColor}">
+            <StackPanel Orientation="Horizontal" Margin="0,30,0,0">
+                <TextBlock Style="{StaticResource MyTextBlockStyle}" Width="240">
+                    MOVIE
+                </TextBlock>
+                <TextBlock Style="{StaticResource MyTextBlockStyle}" Width="165" RenderTransformOrigin="0.5,0.5">
+                    <TextBlock.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform/>
+                            <SkewTransform/>
+                            <RotateTransform Angle="-0.296"/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </TextBlock.RenderTransform><Run Text="SESSIONS"/></TextBlock>
+
+                <TextBlock Style="{StaticResource MyTextBlockStyle}" Width="185">
+                    CINEMA
+                </TextBlock>
+
+                <TextBlock Style="{StaticResource MyTextBlockStyle}" Width="200">
+                    HALL
+                </TextBlock>
+                <TextBlock Style="{StaticResource MyTextBlockStyle}" Width="205"><Run Text="FORMAT"/></TextBlock>
+
+                <TextBlock Style="{StaticResource MyTextBlockStyle}" Width="183">
+                    PRICE
+                </TextBlock>
+
+                <TextBlock Style="{StaticResource MyTextBlockStyle}">
+                    BUY NOW
+                </TextBlock>
+            </StackPanel>
+        </Border>
+    </Grid>
+</UserControl>

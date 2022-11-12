@@ -1,0 +1,36 @@
+﻿<UserControl x:Class="CinemaPlus.Views.UserControls.Home.SecondToolsUC"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:CinemaPlus.Views.UserControls.Home"
+             mc:Ignorable="d" 
+             d:DesignHeight="71"
+             d:DesignWidth="1200"
+             Height="80"
+             Width="1200"
+             VerticalAlignment="Center">
+    <Grid>
+        <StackPanel Orientation="Horizontal"
+                        Background="{DynamicResource thirdColor}">
+            <Button Style="{StaticResource MyButtonStyle2}" Margin="40,0,0,0" Command="{Binding HomeCommand}">Home</Button>
+            <Button Style="{StaticResource MyButtonStyle2}" Command="{Binding FaqCommand}" >FAQ</Button>
+            <Button Style="{StaticResource MyButtonStyle2}" Command="{Binding TariffsCommand}" >Tariffs</Button>
+            <Button Style="{StaticResource MyButtonStyle2}" Command="{Binding CineBonusCommand}" >CineBonus</Button>
+
+            <Image Source="\Images\callIcon.png"
+                       Margin="30,0,0,0"
+                       Width="20"
+                       Height="20"></Image>
+            <Label Content="+994 99 906 66 44" 
+                       Foreground="{DynamicResource firstColor}"
+                       Margin="0,0,0,0"
+                       Height="35"
+                       FontSize="20"
+                       FontFamily="\Fonts\#Roboto Medium"
+                       VerticalContentAlignment="Center"
+                       Cursor="IBeam"/>
+        </StackPanel>
+    </Grid>
+</UserControl>
+

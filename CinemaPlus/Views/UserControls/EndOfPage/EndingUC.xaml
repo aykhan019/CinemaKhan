@@ -1,0 +1,334 @@
+﻿<UserControl x:Class="CinemaPlus.Views.UserControls.EndOfPage.EndingUC"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:CinemaPlus.Views.UserControls.EndOfPage"
+             mc:Ignorable="d" 
+             d:DesignHeight="190"
+             d:DesignWidth="1300"
+             Height="190"
+             Width="1275">
+    <Grid>
+        <Grid.Background>
+            <LinearGradientBrush  StartPoint="0 0" EndPoint="0.99 0">
+                <LinearGradientBrush.GradientStops>
+                    <GradientStop Offset="2" Color="#ABE9F6"></GradientStop>
+                    <GradientStop Offset="0.1" Color="#0489D6"></GradientStop>
+                    <GradientStop Offset="0.2" Color="#0571D3"></GradientStop>
+                    <GradientStop Offset="0.55" Color="#0055CA"></GradientStop>
+                    <GradientStop Offset="0.9" Color="#0571D3"></GradientStop>
+                    <GradientStop Offset="1.6" Color="#ABE9F6"></GradientStop>
+                </LinearGradientBrush.GradientStops>
+            </LinearGradientBrush>
+        </Grid.Background>
+
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="100"></RowDefinition>
+            <RowDefinition Height="90"></RowDefinition>
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="5*"></ColumnDefinition>
+            <ColumnDefinition Width="3*"></ColumnDefinition>
+            <ColumnDefinition Width="5*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+
+
+        <!--<Line X1="200" Y1="100"
+              X2="70" Y2="100"
+              Stroke="White"
+              StrokeThickness="3" Margin="-8,0,8,0"/>
+
+        <Line Grid.Row="0"
+              X1="0" Y1="100"
+              X2="500" Y2="100"
+              Stroke="White"
+              StrokeThickness="3" Grid.ColumnSpan="2" Margin="492,0,8,0"/>
+
+        <Line Grid.Row="0"
+              Grid.Column="1"
+              X1="0" Y1="100"
+              X2="300" Y2="100"
+              Stroke="White"
+              StrokeThickness="3" Grid.ColumnSpan="2" Margin="292,0,8,0"/>
+
+        <Line X1="500" Y1="15"
+              X2="500" Y2="85"
+              Stroke="White"
+              StrokeThickness="1.5" Margin="-8,0,8,0"/>
+
+        <Line Grid.Row="0"
+              X1="300" Y1="15"
+              X2="300" Y2="85"
+              Stroke="White"
+              StrokeThickness="1.5" Grid.ColumnSpan="2" Margin="492,0,8,0"/>-->
+
+        <Grid Grid.Row="0" 
+              Grid.Column="0"
+              Grid.RowSpan="2"
+              Grid.ColumnSpan="3">
+            <Line X1="200" Y1="100"
+                  X2="1100" Y2="100"
+                  Stroke="{DynamicResource firstColor}"
+                  StrokeThickness="2">
+            </Line>
+
+            <Line X1="200" Y1="100"
+                  X2="1100" Y2="100"
+                  Stroke="{DynamicResource firstColor}"
+                  StrokeThickness="2">
+            </Line>
+
+
+            <Line X1="500" Y1="10"
+                  X2="500" Y2="90"
+                  Stroke="{DynamicResource firstColor}"
+                  StrokeThickness="2">
+            </Line>
+
+
+            <Line X1="800" Y1="10"
+                  X2="800" Y2="90"
+                  Stroke="{DynamicResource firstColor}"
+                  StrokeThickness="2">
+            </Line>
+        </Grid>
+
+
+
+        <Grid Grid.Row="0"
+              Grid.Column="0" Margin="-8,0,8,0">
+            <StackPanel Background="Transparent"
+                        Width="147"
+                        Orientation="Vertical"
+                        HorizontalAlignment="Left" 
+                        Margin="206,0,0,0">
+                <Canvas>
+                    <Label Style="{StaticResource MyLabelStyle}" Canvas.Top="12" Content="About Us">
+                        <Label.InputBindings>
+                            <MouseBinding Gesture="LeftClick" Command = "{Binding AboutUsCommand}"/>
+                        </Label.InputBindings>
+                    </Label>
+
+                    <Label Style="{StaticResource MyLabelStyle}" Canvas.Top="36" Content="Services">
+                        <Label.InputBindings>
+                            <MouseBinding Gesture="LeftClick" Command = "{Binding ServicesCommand}"/>
+                        </Label.InputBindings>
+                    </Label>
+
+                    <Label Style="{StaticResource MyLabelStyle}" Canvas.Top="60" Content="Rules">
+                        <Label.InputBindings>
+                            <MouseBinding Gesture="LeftClick" Command = "{Binding RulesCommand}"/>
+                        </Label.InputBindings>
+                    </Label>
+                </Canvas>
+            </StackPanel>
+            <StackPanel Background="Transparent"
+                        Width="147"
+                        Orientation="Vertical"
+                        HorizontalAlignment="Left"
+                        Margin="352,0,0,0">
+                <Canvas>
+                    <Label Style="{StaticResource MyLabelStyle}" Canvas.Top="12" Content="FAQ">
+                        <Label.InputBindings>
+                            <MouseBinding Gesture="LeftClick" Command = "{Binding FaqCommand}"/>
+                        </Label.InputBindings>
+                    </Label>
+
+                    <Label Style="{StaticResource MyLabelStyle}" Canvas.Top="36" Content="Tariffs">
+                        <Label.InputBindings>
+                            <MouseBinding Gesture="LeftClick" Command = "{Binding TariffsCommand}"/>
+                        </Label.InputBindings>
+                    </Label>
+                    <Label Style="{StaticResource MyLabelStyle}" Canvas.Top="60" Content="Admin Side">
+                        <Label.InputBindings>
+                            <MouseBinding Gesture="LeftClick" Command = "{Binding AdminSideCommand}"/>
+                        </Label.InputBindings>
+                    </Label>
+                </Canvas>
+            </StackPanel>
+        </Grid>
+
+        <Grid Grid.Row="0"
+              Width="300"
+              Height="100" Grid.ColumnSpan="2" Margin="486,0,14,0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="80"/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <StackPanel Width="212"
+                        Height="100"
+                        Orientation="Horizontal"
+                        VerticalAlignment="Top"
+                        HorizontalAlignment="Center" Margin="53,0,0,0">
+
+                <Border Height="40"
+                        Width="40"
+                        BorderThickness="2"
+                        BorderBrush="{DynamicResource firstColor}"
+                        Margin="0,0,5,0">
+                    <StackPanel Background="Transparent"
+                                Cursor="Hand">
+                        <Image  Source="/Images/facebook.png"
+                                Height="25"
+                                Margin="1,3,7,5">
+                        </Image>
+                        <StackPanel.InputBindings>
+                            <MouseBinding Gesture="LeftClick" Command="{Binding FacebookCommand}"/>
+                        </StackPanel.InputBindings>
+                    </StackPanel>
+                </Border>
+
+                <Border Height="40"
+                        Width="40"
+                        BorderThickness="2"
+                        BorderBrush="{DynamicResource firstColor}"
+                        Margin="5">
+                    <StackPanel Background="Transparent"
+                                Cursor="Hand">
+                        <Image Source="/Images/telegram.png"
+                                Height="20"
+                                Margin="4.5,7,5,5">
+                        </Image>
+                        <StackPanel.InputBindings>
+                            <MouseBinding Gesture="LeftClick" Command="{Binding TelegramCommand}"/>
+                        </StackPanel.InputBindings>
+                    </StackPanel>
+                </Border>
+
+                <Border Height="40"
+                        Width="40"
+                        BorderThickness="2"
+                        BorderBrush="{DynamicResource firstColor}"
+                        Margin="5">
+                    <StackPanel Background="Transparent"
+                                Cursor="Hand">
+                        <Image Source="/Images/youtube.png"
+                                Cursor="Hand"
+                                Height="20"
+                                Margin="5,8,4,5">
+                        </Image>
+                        <StackPanel.InputBindings>
+                            <MouseBinding Gesture="LeftClick" Command="{Binding YoutubeCommand}"/>
+                        </StackPanel.InputBindings>
+                    </StackPanel>
+                </Border>
+
+                <Border Height="40"
+                        Width="40"
+                        BorderThickness="2"
+                        BorderBrush="{DynamicResource firstColor}"
+                        Margin="5">
+                    <StackPanel Background="Transparent"
+                                Cursor="Hand">
+                        <Image Source="/Images/instaLogo.png"
+                                Cursor="Hand"
+                                Height="20"
+                                Margin="8,9,5,5">
+                        </Image>
+                        <StackPanel.InputBindings>
+                            <MouseBinding Gesture="LeftClick" Command="{Binding InstagramCommand}"/>
+                        </StackPanel.InputBindings>
+                    </StackPanel>
+                </Border>
+
+            </StackPanel>
+        </Grid>
+
+        <Grid Grid.Row="0"
+              Grid.Column="2" Margin="5,0,-5,0">
+            <StackPanel Orientation="Horizontal">
+
+                <Border Height="40"
+                        Width="115"
+                        CornerRadius="4"
+                        BorderThickness="2"
+                        BorderBrush="{DynamicResource firstColor}"
+                        Margin="40,16,15,15"
+                        Cursor="Hand">
+                    <StackPanel Background="Transparent"
+                                Cursor="Hand">
+                        <Image Source="/Images/availableAppStore.png"
+                               Cursor="Hand"
+                               Margin="4,1,4,3"/>
+                        <StackPanel.InputBindings>
+                            <MouseBinding Gesture="LeftClick" Command="{Binding AppStoreCommand}"></MouseBinding>
+                        </StackPanel.InputBindings>
+                    </StackPanel>
+                </Border>
+
+                <Border Height="40"
+                        Width="115"
+                        CornerRadius="4"
+                        BorderThickness="2"
+                        Cursor="Hand"
+                        BorderBrush="{DynamicResource firstColor}"
+                        Margin="10,10,10,10">
+                    <StackPanel Background="Transparent"
+                                Cursor="Hand">
+                        <Image Source="/Images/GetGooglePlay.png"
+                               Margin="3,4,3,0"
+                               Cursor="Hand" Height="28" RenderTransformOrigin="0.523,1"/>
+                        <StackPanel.InputBindings>
+                            <MouseBinding Gesture="LeftClick" Command="{Binding GooglePlayCommand}"></MouseBinding>
+                        </StackPanel.InputBindings>
+                    </StackPanel>
+                </Border>
+            </StackPanel>
+        </Grid>
+
+        <Grid Grid.Row="1"
+              Grid.ColumnSpan="3" Margin="-4,0,4,-25">
+
+            <Label Style="{StaticResource MyLabelStyle}"
+                   HorizontalAlignment="Left"
+                   VerticalAlignment="Top"
+                   Margin="205,10,0,0" 
+                   Width="324" 
+                   Height="35"
+                   Cursor="IBeam">
+                All rights reserved. © CinemaKhan LLC 2012-2022
+            </Label>
+
+            <Label Style="{StaticResource MyLabelStyle}"
+                   HorizontalAlignment="Left"
+                   VerticalAlignment="Top"
+                   Margin="204,34,0,0" 
+                   Width="325" 
+                   Cursor="Hand"
+                   Height="35"
+                   RenderTransformOrigin="0.516,-0.143">
+                <Label.InputBindings>
+                    <MouseBinding Gesture="LeftClick" Command="{Binding SiteCommand}"/>
+                </Label.InputBindings>
+                <TextBlock Text="Saytın tam versiyası"
+                           Foreground="White">
+                     <Hyperlink NavigateUri="http://www.google.com"></Hyperlink>
+                    <TextBlock.Style>
+                        <Style TargetType="TextBlock">
+                            <Style.Triggers>
+                                <Trigger Property ="IsMouseOver" Value="True">
+                                    <Setter Property= "TextDecorations" Value="None"/>
+                                </Trigger>
+                                <Trigger Property ="IsMouseOver" Value="False">
+                                    <Setter Property= "TextDecorations" Value="Underline"/>
+                                </Trigger>
+                            </Style.Triggers>
+                        </Style>
+                    </TextBlock.Style>
+                </TextBlock>
+            </Label>
+
+            <Image Source="/Images/vipclub.png"
+                   Height="60" 
+                   Margin="903,8,177,47"
+                   Cursor="Hand">
+                <Image.InputBindings>
+                    <MouseBinding Gesture="LeftClick" Command="{Binding VipClubCommand}"></MouseBinding>
+                </Image.InputBindings>
+            </Image>
+        </Grid>
+    </Grid>
+</UserControl>

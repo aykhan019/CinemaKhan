@@ -1,0 +1,198 @@
+﻿<Window x:Class="CinemaPlus.Views.Main.OrderWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CinemaPlus.Views.Main" xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity" xmlns:ei="http://schemas.microsoft.com/expression/2010/interactions"
+        mc:Ignorable="d"
+        Title="OrderWindow"    
+        WindowStartupLocation="Manual"
+        WindowStyle="None" 
+        AllowsTransparency="True" 
+        Background="Transparent"
+        ShowInTaskbar="False"
+        Height="500"    
+        Width="350"
+        d:DesignHeight="500"
+        d:DesignWidth="350">
+    <Grid>
+        <Border CornerRadius="10"
+            Padding="3" 
+            BorderThickness="3"
+            Background="{DynamicResource firstColor}" >
+            <StackPanel>
+                <Canvas>
+                    <Button Width="30"
+                            Height="30"
+                            Canvas.Top="0"
+                            Canvas.Right="0"
+                            Cursor="Hand"
+                            Command="{Binding CloseCommand}">
+                        <Button.Template>
+                            <ControlTemplate TargetType="Button">
+                                <Grid>
+                                    <Ellipse Fill="White" StrokeThickness="1" Stroke="{StaticResource fifthColor}"/>
+                                    <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" Content=""/>
+                                    <Image Source="\Images\close.png"></Image>
+                                </Grid>
+                            </ControlTemplate>
+                        </Button.Template>
+                    </Button>
+                </Canvas>
+
+                <TextBlock Style="{StaticResource MyTextBlockStyle}" 
+                       Foreground="{StaticResource fifthColor}"
+                       HorizontalAlignment="Center"
+                       TextAlignment="Center"
+                       Width="80"
+                       Margin="20"
+                       Cursor="IBeam"
+                       FontSize="24"
+                       Text="Order">
+                </TextBlock>
+
+                <TextBlock Style="{StaticResource MyTextBlockStyle}" 
+                       Foreground="{StaticResource fifthColor}"
+                       HorizontalAlignment="Center"
+                       Width="40"
+                       Margin="0,0,0,10"
+                       FontSize="14"
+                       Text="E-mail">
+                </TextBlock>
+
+                <TextBox Height="40"
+                         Style="{StaticResource MyTextBoxStyle}"
+                         Margin="20,0,20,0"
+                         FontSize="17"
+                         Text="{Binding TextOfEmailTBox, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
+                         Padding="10,8,10,0">
+                </TextBox>
+                <TextBlock Style="{StaticResource MyTextBlockStyle}" 
+                           Foreground="Transparent"
+                           Width="216"
+                           Margin="23,3,0,0"
+                           Name="EmailWarning"
+                           FontSize="14"
+                           Text="Please, enter a valid e-mail adress">
+                </TextBlock>
+
+                <TextBlock Style="{StaticResource MyTextBlockStyle}" 
+                            Foreground="{StaticResource fifthColor}"
+                            Width="75"
+                            HorizontalAlignment="Center"
+                            FontSize="14"
+                            Margin="0,2,0,5"
+                            Text="Cell. phone">
+                </TextBlock>
+
+                <StackPanel Height="40" 
+                            Orientation="Horizontal"
+                            Margin="0,5,0,0">
+                    <TextBox Height="40"
+                             Style="{StaticResource MyTextBoxStyle}"
+                             Margin="20,0,10,0"
+                             Width="78"
+                             FontSize="17"
+                             Text="+994"
+                             IsReadOnly="True"
+                             Focusable="False" 
+                             Padding="10,8,10,0">
+                    </TextBox>
+                    <ComboBox Width="80"
+                              Background="{DynamicResource firstColor}"
+                              Style="{StaticResource comboBoxStyle3}"
+                              FontFamily="\Fonts\#Ponder-Black"
+                              FontSize="17"
+                              SelectedIndex="{Binding PhoneNumbersStartingsIndex, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
+                              ItemsSource="{Binding PhoneNumberStartings, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
+                              FontWeight="Normal">
+                    </ComboBox>
+
+                    <TextBox Height="40"
+                             Style="{StaticResource MyTextBoxStyle}"
+                             Margin="10,0,20,0"
+                             Text="{Binding TextOfPhoneTBox, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
+                             FontSize="17"
+                             Padding="10,8,10,0"
+                             Width="120"
+                             Name="txtBox"
+                             MaxLength="7">
+                        <i:Interaction.Triggers>
+                            <i:EventTrigger EventName="PreviewTextInput" >
+                                <ei:CallMethodAction TargetObject="{Binding}" MethodName="IsAllowedInput"/>
+                            </i:EventTrigger>
+                        </i:Interaction.Triggers>
+                    </TextBox>
+                </StackPanel>
+                
+                <TextBlock Style="{StaticResource MyTextBlockStyle}" 
+                           Foreground="Transparent"
+                           Width="256"
+                           Margin="23,3,0,0"
+                           FontSize="14"
+                           Name="PhoneWarning"
+                           Text="Please, enter a valid cell. phone number">
+                </TextBlock>
+
+                <TextBlock Style="{StaticResource MyTextBlockStyle}" 
+                    Foreground="{StaticResource fifthColor}"
+                    Width="60"
+                    HorizontalAlignment="Center"
+                    FontSize="14"
+                    Margin="0,3,0,5"
+                    Text="Payment">
+                </TextBlock>
+                <ComboBox Width="298"
+                          Background="{DynamicResource firstColor}"
+                          Style="{StaticResource comboBoxStyle4}"
+                          FontFamily="\Fonts\#Ponder-Black"
+                          FontSize="17"
+                          SelectedIndex="{Binding SelectedIndexOfPaymentCb, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
+                          FontWeight="Normal"
+                          ItemsSource="{Binding PaymentList, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}">
+                </ComboBox>
+
+                <TextBlock Style="{StaticResource MyTextBlockStyle}" 
+                       Foreground="{StaticResource fifthColor}"
+                       HorizontalAlignment="Center"
+                       Width="90"
+                       Margin="0,15,0,5"
+                       FontSize="14"
+                       Text="Card number">
+                </TextBlock>
+
+                <TextBox Height="40"
+                         Style="{StaticResource MyTextBoxStyle}"
+                         Margin="20,5,20,0"
+                         Text="{Binding TextOfDigitsOfCardTBox, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
+                         FontSize="17"
+                         MaxLength="16"
+                         Padding="10,8,10,0">
+                    <i:Interaction.Triggers>
+                        <i:EventTrigger EventName="PreviewTextInput">
+                            <ei:CallMethodAction TargetObject="{Binding}" MethodName="IsAllowedInput"/>
+                        </i:EventTrigger>
+                    </i:Interaction.Triggers>
+                </TextBox>
+
+                <TextBlock Style="{StaticResource MyTextBlockStyle}" 
+                           Foreground="Transparent"
+                           Width="211"
+                           Margin="23,3,0,0"
+                           FontSize="14"
+                           Name="DigitsOfCardWarning"
+                           Text="Please, enter a valid card number">
+                </TextBlock>
+
+                <Button Style="{StaticResource MyButtonStyle2}"
+                        Background="{StaticResource eighthColor}"
+                        Margin="20,15,20,0" 
+                        Width="300" 
+                        Height="40"
+                        Content="Pay"
+                        Command="{Binding PayCommand}">
+                </Button>
+            </StackPanel>
+        </Border>
+    </Grid>
+</Window>

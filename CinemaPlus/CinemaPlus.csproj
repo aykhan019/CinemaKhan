@@ -1,0 +1,751 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{54916BE0-FB5B-4CA3-BA58-9CDCD07EF849}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>CinemaPlus</RootNamespace>
+    <AssemblyName>CinemaPlus</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="BouncyCastle.Crypto, Version=1.8.9.0, Culture=neutral, PublicKeyToken=0e99375e54769942">
+      <HintPath>..\packages\BouncyCastle.1.8.9\lib\BouncyCastle.Crypto.dll</HintPath>
+    </Reference>
+    <Reference Include="itextsharp, Version=5.5.13.3, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <HintPath>..\packages\iTextSharp.5.5.13.3\lib\itextsharp.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Expression.Interactions, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Windows.Interactivity.WPF.2.0.20525\lib\net40\Microsoft.Expression.Interactions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Web.WebView2.Core, Version=1.0.1370.28, Culture=neutral, PublicKeyToken=2a8ab48044d2601e, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Web.WebView2.1.0.1370.28\lib\net45\Microsoft.Web.WebView2.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Web.WebView2.WinForms, Version=1.0.1370.28, Culture=neutral, PublicKeyToken=2a8ab48044d2601e, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Web.WebView2.1.0.1370.28\lib\net45\Microsoft.Web.WebView2.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Web.WebView2.Wpf, Version=1.0.1370.28, Culture=neutral, PublicKeyToken=2a8ab48044d2601e, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Web.WebView2.1.0.1370.28\lib\net45\Microsoft.Web.WebView2.Wpf.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.13.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Interactivity, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Windows.Interactivity.WPF.2.0.20525\lib\net40\System.Windows.Interactivity.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="ToastNotifications, Version=2.5.1.0, Culture=neutral, PublicKeyToken=e89d9d7314a7c797, processorArchitecture=MSIL">
+      <HintPath>..\packages\ToastNotifications.2.5.1\lib\net40\ToastNotifications.dll</HintPath>
+    </Reference>
+    <Reference Include="ToastNotifications.Messages, Version=2.5.1.0, Culture=neutral, PublicKeyToken=e89d9d7314a7c797, processorArchitecture=MSIL">
+      <HintPath>..\packages\ToastNotifications.Messages.2.5.1\lib\net40\ToastNotifications.Messages.dll</HintPath>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="Commands\RelayCommand.cs" />
+    <Compile Include="Helpers\BitmapConverter.cs" />
+    <Compile Include="Helpers\ScreenCapturer.cs" />
+    <Compile Include="Models\DetailedHall.cs" />
+    <Compile Include="Models\Ticket.cs" />
+    <Compile Include="Services\MovieService.cs" />
+    <Compile Include="ViewModels\AdminSideViewModels\AddMovieSessionUCViewModel.cs" />
+    <Compile Include="ViewModels\AdminSideViewModels\AddMovieTabUCViewModel.cs" />
+    <Compile Include="ViewModels\AdminSideViewModels\AdminHomePageUCViewModel.cs" />
+    <Compile Include="ViewModels\AdminSideViewModels\AdminSignInUCViewModel.cs" />
+    <Compile Include="ViewModels\AdminSideViewModels\AdminToolsUCViewModel.cs" />
+    <Compile Include="ViewModels\AdminSideViewModels\EditMovieMainTabUCViewModel.cs" />
+    <Compile Include="ViewModels\AdminSideViewModels\EditMoviePlotTabUCViewModel.cs" />
+    <Compile Include="ViewModels\AdminSideViewModels\EditMoviePosterTabUCViewModel.cs" />
+    <Compile Include="ViewModels\AdminSideViewModels\EditMovieSeatsTabUCViewModel.cs" />
+    <Compile Include="ViewModels\AdminSideViewModels\EditMovieSessionsTabUCViewModel.cs" />
+    <Compile Include="ViewModels\AdminSideViewModels\EditMovieTabUCViewModel.cs" />
+    <Compile Include="ViewModels\AdminSideViewModels\MovieSessionUCViewModel.cs" />
+    <Compile Include="ViewModels\AdminSideViewModels\PurchasedTicketCellUCViewModel.cs" />
+    <Compile Include="ViewModels\AdminSideViewModels\PurchasedTicketsUCViewModel.cs" />
+    <Compile Include="ViewModels\BaseViewModels\BaseViewModel.cs" />
+    <Compile Include="ViewModels\EndingViewModels\EndingUCViewModel.cs" />
+    <Compile Include="ViewModels\EndingViewModels\NoResultUCViewModel.cs" />
+    <Compile Include="ViewModels\HeadOfHomeViewModels\FirstToolsUCViewModel.cs" />
+    <Compile Include="ViewModels\HeadOfHomeViewModels\LogoUCViewModel.cs" />
+    <Compile Include="ViewModels\HeadOfHomeViewModels\SecondToolsUCViewModel.cs" />
+    <Compile Include="ViewModels\HomePageViewModels\HomePageUCViewModel.cs" />
+    <Compile Include="ViewModels\HomePageViewModels\ScheduleUCViewModel.cs" />
+    <Compile Include="ViewModels\HomePageViewModels\SearchUCViewModel.cs" />
+    <Compile Include="ViewModels\HomePageViewModels\TodayUCViewModel.cs" />
+    <Compile Include="ViewModels\MovieViewModels\MovieCellUCViewModel.cs" />
+    <Compile Include="ViewModels\MovieViewModels\MovieDescriptionUCViewModel.cs" />
+    <Compile Include="ViewModels\MovieViewModels\MovieDetailUCViewModel.cs" />
+    <Compile Include="ViewModels\MovieViewModels\MovieSchedulesUCViewModel.cs" />
+    <Compile Include="ViewModels\MovieViewModels\MovieTabsUCViewModel.cs" />
+    <Compile Include="ViewModels\MovieViewModels\MovieTicketUCViewModel.cs" />
+    <Compile Include="ViewModels\MovieViewModels\MovieTrailerUCViewModel.cs" />
+    <Compile Include="ViewModels\MovieViewModels\ScheduleMovieUCViewModel.cs" />
+    <Compile Include="ViewModels\WindowsViewModel\AddMovieWindowViewModel.cs" />
+    <Compile Include="ViewModels\WindowsViewModel\AreYouSureWindowViewModel.cs" />
+    <Compile Include="ViewModels\WindowsViewModel\EditMovieWindowViewModel.cs" />
+    <Compile Include="ViewModels\WindowsViewModel\EditSessionWindowViewModel.cs" />
+    <Compile Include="ViewModels\WindowsViewModel\MainWindowViewModel.cs" />
+    <Compile Include="ViewModels\WindowsViewModel\OrderWindowViewModel.cs" />
+    <Compile Include="ViewModels\WindowsViewModel\SelectSeatsWindowViewModel.cs" />
+    <Compile Include="ViewModels\WindowsViewModel\SuccessfulPaymentWindowViewModel.cs" />
+    <Compile Include="Views\UserControls\AdminSide\AddMovieSessionUC.xaml.cs">
+      <DependentUpon>AddMovieSessionUC.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\UserControls\AdminSide\AddMovieTabUC.xaml.cs">
+      <DependentUpon>AddMovieTabUC.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\UserControls\AdminSide\AdminHomePageUC.xaml.cs">
+      <DependentUpon>AdminHomePageUC.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\UserControls\AdminSide\AdminSignInUC.xaml.cs">
+      <DependentUpon>AdminSignInUC.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\UserControls\AdminSide\AdminToolsUC.xaml.cs">
+      <DependentUpon>AdminToolsUC.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\UserControls\AdminSide\EditMovieMainTabUC.xaml.cs">
+      <DependentUpon>EditMovieMainTabUC.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\UserControls\AdminSide\EditMoviePlotTabUC.xaml.cs">
+      <DependentUpon>EditMoviePlotTabUC.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\UserControls\AdminSide\EditMoviePosterTabUC.xaml.cs">
+      <DependentUpon>EditMoviePosterTabUC.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\UserControls\AdminSide\EditMovieSeatsTabUC.xaml.cs">
+      <DependentUpon>EditMovieSeatsTabUC.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\UserControls\AdminSide\EditMovieSessionsTabUC.xaml.cs">
+      <DependentUpon>EditMovieSessionsTabUC.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\UserControls\AdminSide\EditMovieTabUC.xaml.cs">
+      <DependentUpon>EditMovieTabUC.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\UserControls\AdminSide\MovieSessionUC.xaml.cs">
+      <DependentUpon>MovieSessionUC.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\UserControls\AdminSide\PurchasedTicketCellUC.xaml.cs">
+      <DependentUpon>PurchasedTicketCellUC.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\UserControls\AdminSide\PurchasedTicketsUC.xaml.cs">
+      <DependentUpon>PurchasedTicketsUC.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\UserControls\EndOfPage\EndingUC.xaml.cs">
+      <DependentUpon>EndingUC.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\UserControls\EndOfPage\NoResultUC.xaml.cs">
+      <DependentUpon>NoResultUC.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\UserControls\EndOfPage\NoSearchResultUC.xaml.cs">
+      <DependentUpon>NoSearchResultUC.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\UserControls\EndOfPage\WeAreBackUC.xaml.cs">
+      <DependentUpon>WeAreBackUC.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\UserControls\HeadOfHome\FirstToolsUC.xaml.cs">
+      <DependentUpon>FirstToolsUC.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\UserControls\HeadOfHome\LogoUC.xaml.cs">
+      <DependentUpon>LogoUC.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\UserControls\HeadOfHome\ScheduleHeadUC.xaml.cs">
+      <DependentUpon>ScheduleHeadUC.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\UserControls\HeadOfHome\SecondToolsUC.xaml.cs">
+      <DependentUpon>SecondToolsUC.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\UserControls\HomePage\AboutUsUC.xaml.cs">
+      <DependentUpon>AboutUsUC.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\UserControls\HomePage\CineBonusUC.xaml.cs">
+      <DependentUpon>CineBonusUC.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\UserControls\HomePage\DolbyAtmosUC.xaml.cs">
+      <DependentUpon>DolbyAtmosUC.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\UserControls\HomePage\FaqUC.xaml.cs">
+      <DependentUpon>FaqUC.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\UserControls\HomePage\HomePageUC.xaml.cs">
+      <DependentUpon>HomePageUC.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\UserControls\HomePage\PlatiniumUC.xaml.cs">
+      <DependentUpon>PlatiniumUC.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\UserControls\HomePage\RulesUC.xaml.cs">
+      <DependentUpon>RulesUC.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\UserControls\HomePage\ScheduleUC.xaml.cs">
+      <DependentUpon>ScheduleUC.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\UserControls\HomePage\SearchUC.xaml.cs">
+      <DependentUpon>SearchUC.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\UserControls\HomePage\ServicesUC.xaml.cs">
+      <DependentUpon>ServicesUC.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\UserControls\HomePage\SoonUC.xaml.cs">
+      <DependentUpon>SoonUC.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\UserControls\HomePage\TariffsUC.xaml.cs">
+      <DependentUpon>TariffsUC.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\UserControls\HomePage\TodayUC.xaml.cs">
+      <DependentUpon>TodayUC.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\UserControls\MovieUC\AnotherMoviesUC.xaml.cs">
+      <DependentUpon>AnotherMoviesUC.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\UserControls\MovieUC\MovieCellUC.xaml.cs">
+      <DependentUpon>MovieCellUC.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\UserControls\MovieUC\MovieDescriptionUC.xaml.cs">
+      <DependentUpon>MovieDescriptionUC.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\UserControls\MovieUC\MovieDetailUC.xaml.cs">
+      <DependentUpon>MovieDetailUC.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\UserControls\MovieUC\MovieSchedulesUC.xaml.cs">
+      <DependentUpon>MovieSchedulesUC.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\UserControls\MovieUC\MovieTabsUC.xaml.cs">
+      <DependentUpon>MovieTabsUC.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\UserControls\MovieUC\MovieTicketUC.xaml.cs">
+      <DependentUpon>MovieTicketUC.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\UserControls\MovieUC\MovieTrailerUC.xaml.cs">
+      <DependentUpon>MovieTrailerUC.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\UserControls\MovieUC\PopupUC.xaml.cs">
+      <DependentUpon>PopupUC.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\UserControls\MovieUC\ScheduleMovieUC.xaml.cs">
+      <DependentUpon>ScheduleMovieUC.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Windows\AddMovieWindow.xaml.cs">
+      <DependentUpon>AddMovieWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Windows\AreYouSureWindow.xaml.cs">
+      <DependentUpon>AreYouSureWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Windows\EditMovieWindow.xaml.cs">
+      <DependentUpon>EditMovieWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Windows\EditSessionWindow.xaml.cs">
+      <DependentUpon>EditSessionWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Windows\MovieTicketWindow.xaml.cs">
+      <DependentUpon>MovieTicketWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Windows\OrderWindow.xaml.cs">
+      <DependentUpon>OrderWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Windows\SelectSeatsWindow.xaml.cs">
+      <DependentUpon>SelectSeatsWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Windows\SuccessfulPaymentWindow.xaml.cs">
+      <DependentUpon>SuccessfulPaymentWindow.xaml</DependentUpon>
+    </Compile>
+    <Page Include="Dictionaries\ButtonStyles.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Dictionaries\Colors.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Dictionaries\ComboBoxStyles.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Dictionaries\LabelStyles.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Dictionaries\ScrollViewerStyles.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Dictionaries\TextBlockStyles.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Dictionaries\TextBoxStyles.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\UserControls\AdminSide\AdminToolsUC.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\UserControls\AdminSide\PurchasedTicketCellUC.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\UserControls\AdminSide\PurchasedTicketsUC.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\UserControls\MovieUC\PopupUC.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Windows\AddMovieWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Windows\AreYouSureWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Windows\MainWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Helpers\EmailHelper.cs" />
+    <Compile Include="Helpers\Helper.cs" />
+    <Compile Include="Helpers\JsonHelper\JsonSerialization.cs" />
+    <Compile Include="Helpers\MovieCellUCHelper.cs" />
+    <Compile Include="Views\Windows\MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Page Include="Views\UserControls\AdminSide\AddMovieSessionUC.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\UserControls\AdminSide\AddMovieTabUC.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\UserControls\AdminSide\AdminHomePageUC.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\UserControls\AdminSide\AdminSignInUC.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\UserControls\AdminSide\EditMovieMainTabUC.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\UserControls\AdminSide\EditMoviePlotTabUC.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\UserControls\AdminSide\EditMoviePosterTabUC.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\UserControls\AdminSide\EditMovieSeatsTabUC.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\UserControls\AdminSide\EditMovieSessionsTabUC.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\UserControls\AdminSide\EditMovieTabUC.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\UserControls\AdminSide\MovieSessionUC.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\UserControls\EndOfPage\EndingUC.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\UserControls\EndOfPage\NoResultUC.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\UserControls\EndOfPage\NoSearchResultUC.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\UserControls\EndOfPage\WeAreBackUC.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\UserControls\HeadOfHome\FirstToolsUC.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\UserControls\HeadOfHome\LogoUC.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\UserControls\HeadOfHome\ScheduleHeadUC.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\UserControls\HeadOfHome\SecondToolsUC.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\UserControls\HomePage\AboutUsUC.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\UserControls\HomePage\CineBonusUC.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\UserControls\HomePage\DolbyAtmosUC.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\UserControls\HomePage\FaqUC.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\UserControls\HomePage\HomePageUC.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\UserControls\HomePage\PlatiniumUC.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\UserControls\HomePage\RulesUC.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\UserControls\HomePage\ScheduleUC.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\UserControls\HomePage\SearchUC.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\UserControls\HomePage\ServicesUC.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\UserControls\HomePage\SoonUC.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\UserControls\HomePage\TariffsUC.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\UserControls\HomePage\TodayUC.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\UserControls\MovieUC\AnotherMoviesUC.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\UserControls\MovieUC\MovieCellUC.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\UserControls\MovieUC\MovieDescriptionUC.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\UserControls\MovieUC\MovieDetailUC.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\UserControls\MovieUC\MovieSchedulesUC.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\UserControls\MovieUC\MovieTabsUC.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\UserControls\MovieUC\MovieTicketUC.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\UserControls\MovieUC\MovieTrailerUC.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\UserControls\MovieUC\ScheduleMovieUC.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Windows\EditMovieWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Windows\EditSessionWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Windows\MovieTicketWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Windows\OrderWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Windows\SelectSeatsWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Windows\SuccessfulPaymentWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Models\Admin.cs" />
+    <Compile Include="Models\Cinema.cs" />
+    <Compile Include="Models\Hall.cs" />
+    <Compile Include="Models\Movie.cs" />
+    <Compile Include="Models\Seat.cs" />
+    <Compile Include="Models\Session.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="Files\Defaults\RandomMoviesToAdd.json" />
+    <None Include="Files\Defaults\defaultCinemas.json" />
+    <None Include="Files\Defaults\defaultHalls.json" />
+    <None Include="Files\Defaults\defaultMovies.json" />
+    <Resource Include="Fonts\Alata-Regular.ttf" />
+    <Resource Include="Fonts\Grotley-Regular.ttf" />
+    <Resource Include="Fonts\Kameron-Regular.ttf" />
+    <Resource Include="Fonts\Ponder-Black.ttf" />
+    <Resource Include="Fonts\Ponder-Bold.ttf" />
+    <Resource Include="Fonts\Ponder-Medium.ttf" />
+    <Resource Include="Fonts\Qoxiem.ttf" />
+    <Resource Include="Fonts\Roboto-Medium.ttf" />
+    <Resource Include="Fonts\Rubik-Medium.ttf" />
+    <Resource Include="Fonts\SinkinSans-Medium.otf" />
+    <None Include="Files\purchasedTickets.json" />
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Files\Defaults\Admins.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\2d.png" />
+    <Resource Include="Images\AboutUs.jpeg" />
+    <Resource Include="Images\addIcon.png" />
+    <Resource Include="Images\americanFlag.jpg" />
+    <Resource Include="Images\androidLogo.png" />
+    <Resource Include="Images\appleLogo.png" />
+    <Resource Include="Images\arrow_down.png" />
+    <Resource Include="Images\arrow_up.png" />
+    <Resource Include="Images\availableAppStore.png" />
+    <Resource Include="Images\azsub.png" />
+    <Resource Include="Images\backButton.png" />
+    <Resource Include="Images\backButtonAdminSide.png" />
+    <Resource Include="Images\backgroundAboutUs.jpg" />
+    <Resource Include="Images\barcode.gif" />
+    <Resource Include="Images\BlackCrab.jpg" />
+    <Resource Include="Images\callIcon.png" />
+    <Resource Include="Images\Campaigns.jpeg" />
+    <Resource Include="Images\CineBonus.jpeg" />
+    <Resource Include="Images\cinemaKhanLogo.png" />
+    <Resource Include="Images\cinemaLogo.jpeg" />
+    <Resource Include="Images\clear.png" />
+    <Resource Include="Images\close.png" />
+    <Resource Include="Images\closeWhite.png" />
+    <Resource Include="Images\dragFileIcon.jpeg" />
+    <Resource Include="Images\facebook.png" />
+    <Resource Include="Images\GetGooglePlay.png" />
+    <Resource Include="Images\i1.png" />
+    <Resource Include="Images\i2.png" />
+    <Resource Include="Images\i3.png" />
+    <Resource Include="Images\instaLogo.png" />
+    <Resource Include="Images\loading.gif" />
+    <Resource Include="Images\loginwpf.png" />
+    <Resource Include="Images\logo.png" />
+    <Resource Include="Images\mainTabImage.png" />
+    <Resource Include="Images\mainTabImageWhite.png" />
+    <Resource Include="Images\MoviePosters\AgainstTheIce.jpg" />
+    <Resource Include="Images\MoviePosters\AhBeBirader.png" />
+    <Resource Include="Images\MoviePosters\Ainbo.png" />
+    <Resource Include="Images\MoviePosters\Aporia.png" />
+    <Resource Include="Images\MoviePosters\Avatar.jpg" />
+    <Resource Include="Images\MoviePosters\BeautyAndThe Beast.jpg" />
+    <Resource Include="Images\MoviePosters\BelowZero.jpg" />
+    <Resource Include="Images\MoviePosters\BlackCrab.jpg" />
+    <Resource Include="Images\MoviePosters\BlueBloods.jpg" />
+    <Resource Include="Images\MoviePosters\BulletTrain.jpg" />
+    <Resource Include="Images\MoviePosters\Dahmer.jpg" />
+    <Resource Include="Images\MoviePosters\DayShift.jpg" />
+    <Resource Include="Images\MoviePosters\DCLeagueOfSuperPets.png" />
+    <Resource Include="Images\MoviePosters\EmilyTheCriminal.jpg" />
+    <Resource Include="Images\MoviePosters\Extinct.png" />
+    <Resource Include="Images\MoviePosters\GameOfThrones.jpg" />
+    <Resource Include="Images\MoviePosters\ICameBy.jpg" />
+    <Resource Include="Images\MoviePosters\InterviewWithTheVampire.jpg" />
+    <Resource Include="Images\MoviePosters\IUsedtoBeFamous.jpg" />
+    <Resource Include="Images\MoviePosters\JeepersCreepers.jpg" />
+    <Resource Include="Images\MoviePosters\Joker.jpg" />
+    <Resource Include="Images\MoviePosters\Komutan.png" />
+    <Resource Include="Images\MoviePosters\LegendsOftheFall.jpeg" />
+    <Resource Include="Images\MoviePosters\LittleRedRidingHood.png" />
+    <Resource Include="Images\MoviePosters\Naxox.jpg" />
+    <Resource Include="Images\MoviePosters\Nope.jpg" />
+    <Resource Include="Images\MoviePosters\OglanEvi2.jpg" />
+    <Resource Include="Images\MoviePosters\PawsOfFury.png" />
+    <Resource Include="Images\MoviePosters\RogueAgent.jpg" />
+    <Resource Include="Images\MoviePosters\SpeakNoEvil.png" />
+    <Resource Include="Images\MoviePosters\TheBatman.jpg" />
+    <Resource Include="Images\MoviePosters\TheBlackPhone.jpg" />
+    <Resource Include="Images\MoviePosters\TheEnforcer.png" />
+    <Resource Include="Images\MoviePosters\TheGodfather.jpg" />
+    <Resource Include="Images\MoviePosters\TheGrayMan.jpg" />
+    <Resource Include="Images\MoviePosters\TheLordOfTheRings.jpg" />
+    <Resource Include="Images\MoviePosters\TheManFromToronto.jpg" />
+    <Resource Include="Images\MoviePosters\TheSandman.jpg" />
+    <Resource Include="Images\MoviePosters\ThreeThousandYearsOfLonging.png" />
+    <Resource Include="Images\MoviePosters\TicketToParadise.png" />
+    <Resource Include="Images\MoviePosters\TopGun.jpg" />
+    <Resource Include="Images\MoviePosters\Vesper.png" />
+    <Resource Include="Images\MoviePosters\WhereTheCrawdadsSing.png" />
+    <Resource Include="Images\MoviePosters\ZeherTulugu.jpg" />
+    <Resource Include="Images\MoviePosters\ZiriCin.jpg" />
+    <Resource Include="Images\noImage.jpg" />
+    <Resource Include="Images\noresult.png" />
+    <Resource Include="Images\Platinium.jpeg" />
+    <Resource Include="Images\plotTabImage.png" />
+    <Resource Include="Images\plotTabImageWhite.png" />
+    <Resource Include="Images\posterTabImage.png" />
+    <Resource Include="Images\posterTabImageWhite.png" />
+    <Resource Include="Images\Rules.jpeg" />
+    <Resource Include="Images\Search.png" />
+    <Resource Include="Images\seat.png" />
+    <Resource Include="Images\seatsTabImage.png" />
+    <Resource Include="Images\seatsTabImageWhite.png" />
+    <Resource Include="Images\Services.jpeg" />
+    <Resource Include="Images\sessionsTabImage.png" />
+    <Resource Include="Images\sessionsTabImageWhite.png" />
+    <Resource Include="Images\sides.png" />
+    <Resource Include="Images\sides2.png" />
+    <Resource Include="Images\star.png" />
+    <Resource Include="Images\success.png" />
+    <Resource Include="Images\Tariffs.jpeg" />
+    <Resource Include="Images\telegram.png" />
+    <Resource Include="Images\trsub.png" />
+    <Resource Include="Images\vipclub.png" />
+    <Resource Include="Images\world.png" />
+    <Resource Include="Images\youtube.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\weareback.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\cinemaKhanLogoDark.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\2dDark.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\azSubDark.png" />
+    <Resource Include="Images\trSubDark.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\account.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\accountLight.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\accountGray.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\areYouSureCloseButton.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\deleteImage.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\ticketIcon.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="..\packages\Microsoft.Web.WebView2.1.0.1370.28\build\Microsoft.Web.WebView2.targets" Condition="Exists('..\packages\Microsoft.Web.WebView2.1.0.1370.28\build\Microsoft.Web.WebView2.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.Web.WebView2.1.0.1370.28\build\Microsoft.Web.WebView2.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Web.WebView2.1.0.1370.28\build\Microsoft.Web.WebView2.targets'))" />
+  </Target>
+</Project>

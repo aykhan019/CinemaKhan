@@ -1,0 +1,9 @@
+2022/11/12-13:24:45.324 af4 Reusing MANIFEST C:\Users\Hafiz\source\repos\CinemaPlus\CinemaPlus\bin\Debug\CinemaPlus.exe.WebView2\EBWebView\Default\IndexedDB\https_www.youtube.com_0.indexeddb.leveldb/MANIFEST-000001
+2022/11/12-13:24:45.325 af4 Recovering log #30
+2022/11/12-13:24:45.325 af4 Reusing old log C:\Users\Hafiz\source\repos\CinemaPlus\CinemaPlus\bin\Debug\CinemaPlus.exe.WebView2\EBWebView\Default\IndexedDB\https_www.youtube.com_0.indexeddb.leveldb/000030.log 
+2022/11/12-13:24:46.175 29f4 Compacting 1@1 + 1@2 files
+2022/11/12-13:24:46.181 29f4 Generated table #33@1: 633 keys, 41116 bytes
+2022/11/12-13:24:46.182 29f4 Compacted 1@1 + 1@2 files => 41116 bytes
+2022/11/12-13:24:46.182 29f4 compacted to: files[ 0 0 1 0 0 0 0 ]
+2022/11/12-13:24:46.182 29f4 Delete type=2 #28
+2022/11/12-13:24:46.183 29f4 Delete type=2 #31

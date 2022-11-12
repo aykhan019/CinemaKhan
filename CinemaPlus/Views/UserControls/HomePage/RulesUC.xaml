@@ -1,0 +1,155 @@
+﻿<UserControl x:Class="CinemaPlus.Views.UserControls.HomePage.RulesUC"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:CinemaPlus.Views.UserControls.HomePage" xmlns:endofpage="clr-namespace:CinemaPlus.Views.UserControls.EndOfPage"
+             mc:Ignorable="d" 
+             Height="940"
+             Width="1500"
+             d:DesignHeight="940" 
+             d:DesignWidth="1500"
+             Background="{DynamicResource firstColor}"
+             VerticalAlignment="Top"
+             HorizontalAlignment="Center">
+    <ScrollViewer HorizontalScrollBarVisibility="Disabled"
+                  VerticalScrollBarVisibility="Auto"
+                  Margin="19"
+                  x:Name="RulesScroll">
+        <StackPanel Height="2100">
+            <!--<Image Stretch="Fill" Margin="10" Width="1428" Source="\Images\Rules.jpeg" Height="2643" RenderTransformOrigin="0.5,0.5">
+            </Image>-->
+
+            <Viewbox Margin="120,0,120,70">
+                <StackPanel Orientation="Vertical" Width="400">
+
+
+                    <TextBlock Style="{StaticResource MyTextBlockStyle2}" Height="12" Padding="0" FontSize="6" Width="63" Margin="0,10,0,0">Rules</TextBlock>
+                    <Line Stroke="{StaticResource fourthColor}" StrokeThickness="0.3" Margin="0,-10,0,5" X1="0" Y1="10" X2="1500" Y2="10"></Line>
+
+                    <TextBlock TextWrapping="Wrap" FontSize="5" Foreground="{StaticResource fourthColor}" Cursor="IBeam">
+                Rules
+Ticket purchase is considered the date of conclusion of the agreement between the visitor and the "CinemaKhan", and agreement with the Rules of the visit in our cinemas. Any visitor of the cinema has the right to purchase tickets to see these Rules.
+    <LineBreak />    <LineBreak />
+ANY RESTRICTIONS AND PROHIBITIONS CONTAINED IN THESE RULES, ESTABLISHED TO PREVENT AND PREVENTION OF STAY ON THE TERRITORY OF THE CINEMA PEOPLE AND OBJECTS THAT CAN SERVE AS A THREAT OF HARM TO OTHER CINEMA-GOERS AND THEIR PROPERTY AND THE PROPERTY OF THE THEATER, TO PREVENT THE IMMEDIATE EVACUATION OF VISITORS TO THE CINEMA IN CASE OF AN EMERGENCY.
+
+    <LineBreak />
+                    <LineBreak />
+                
+                
+                1. Visitors have the right:
+    <LineBreak />
+                1.1. Free to use all the services provided by "CinemaKhan".
+    <LineBreak />
+                1.2. To receive full and reliable information on services provided in the theater, including additional.
+    <LineBreak />
+                1.3. The refund in case of cancellation viewing, replacement of the film or poor quality of the film, caused by the cinema
+    <LineBreak />
+                1.4. Visitors have the right to submit complaints on issues of implementation services cinema to his administration during the working time.
+
+                    <LineBreak />
+                    <LineBreak />
+2. From the moment of stay on the territory of cinema and to its abandonment, visitors must:
+                    <LineBreak />
+2.1. To comply with these Rules.
+                    <LineBreak />
+2.2. Keep the ticket until the end of the session.
+                    <LineBreak />
+2.3. To observe public order.
+                    <LineBreak />
+2.4. To treat carefully the property of the cinema, the other cinema-goers, to observe cleanliness and order in auditoriums and on-site cinema.
+                    <LineBreak />
+    <LineBreak />
+                
+3. Visitors are prohibited from:
+                    <LineBreak />
+3.1. To visit the cinema in your work or dirty clothes, and Luggage, items and products that can significantly stain the visitors and the interior of the theater, otherwise damage the property of the cinema, by the cinema-goers and/or their property is or may be a threat of causing of such harm.
+                    <LineBreak />
+3.2. To visit the cinema in a condition of alcoholic, narcotic or toxic intoxication.
+                    <LineBreak />
+3.3. To visit the cinema with the animals.    <LineBreak />
+3.4. Entrance to the theatre withown food and drink
+                    <LineBreak />
+3.5. To bring to the cinema firearms, gas, pneumatic and cold arms, explosive devices and pyrotechnics gas cylinders.
+                    <LineBreak />
+3.6. To carry flammable, explosive, poisonous, toxic, messy and stinky items.
+                    <LineBreak />
+
+3.7. Tobacco Smoking and other use of tobacco products in order to smoke inhalation arising from their decay, sucking, chewing, sniffing their tobacco products and electronic cigarettes in auditoriums, a lobby, cash lobby, toilet rooms and other premises and territories of the cinema is not specifically intended or designated Smoking areas.
+                    <LineBreak />
+                
+3.8. To make the auditorium large bags, boxes, suitcases and other items that create noise when the movement of the audience in the hall while watching the movie and impeding evacuation in case of fire or emergency, total dimensions of which in length, width and height must not exceed 120 inches.
+                    <LineBreak />
+3.9. To make photo and video filming in the auditorium during the screening of the film, as well as on the territory of the cinema without coordination with the administration of the cinema.    <LineBreak />
+3.10. During the session, to use the means of radio communication, which at the time of the session should be disabled.    <LineBreak />
+3.11. To break the silence in the hall during a session, use items, creating sound effects and hinder view.    <LineBreak />
+3.12. To take seats in the auditorium that does not meet the number number and place in the bought ticket.    <LineBreak />
+3.13. To litter and throw various objects (packs, gum, bottles, napkins, remnants of food, etc.) in auditoriums and on-site cinema, to leave unattended belongings, bags, packages and other carry-on baggage.    <LineBreak />
+3.14. To travel throughout the theater on a skateboard, scooter, roller skates or a Bicycle and other pedestrian way.    <LineBreak />
+3.15. Cinema administration has the right not to allow the audience to view or to remove from the hall in case of violation of a public audience    <LineBreak />
+
+                    <LineBreak />    
+                
+4. Rules for buying and booking of tickets:    <LineBreak />
+4.1. The viewer is obliged to check tickets purchased and issued on the surrender of the money on the spot ticket. Monetary claims that are made after the purchase of the ticket, not taken into account.    <LineBreak />
+4.2. In case you are late to the session due to his fault, the tickets are refundable and cannot be exchanged. In this case, the viewer can browse a session regardless of time elapsed since its beginning.    <LineBreak />
+4.3. The reservation is cancelled 1 hour before the start of the session and deposited in the General sale.    <LineBreak />
+4.4. When you purchase previously reserved tickets, before payment at the checkout, you must RE-verify the correctness of the chosen movie, the date, time and session.    <LineBreak />
+4.5. If the conditions of booking of tickets through the Internet is not complied with by the consumer or by personal application at the ticket office of the cinema requested was unavailable, the administration of the cinema for is not responsible.    <LineBreak />
+4.7. The administration of the "CinemaKhan" denies ticket:    <LineBreak />
+Persons with obvious signs of alcoholic or narcotic intoxication;    <LineBreak />
+Persons who violate rules of conduct in public places, including in the cinema.    <LineBreak />
+4.8. Buying a ticket, the Visitor automatically agrees to set out in this document rules.    <LineBreak />
+
+                    <LineBreak />
+                
+                
+5. Access mode    <LineBreak />
+5.1. The entrance to the hall begins no earlier than 5-10 minutes before the session began.    <LineBreak />
+5.2. The entrance to the hall is allowed at the session, which purchased the ticket.    <LineBreak />
+5.3. A ticket without a control line is invalid.    <LineBreak />
+5.4. The ticket must be retained by the viewer to control to the end of the session.    <LineBreak />
+5.5. In the case of a spectator from the audience during a session, when entering the viewer back to the room, the Comptroller may require to produce a ticket.    <LineBreak />
+5.6. The entrance to the auditorium with food and drinks not purchased in the cinema is prohibited.    <LineBreak />
+5.7. Children over 4 years old must purchase a ticket    <LineBreak />
+    <LineBreak />
+6. 3D glasses    <LineBreak />
+6.1. 3D glasses issued by the cashier when buying a ticket inspector each viewer 1 EA. complete with disposable disinfecting wipes only upon presentation of a ticket.    <LineBreak />
+6.2. To wipe the glasses should be only a special cloth, which is issued at the entrance to the hall.    <LineBreak />
+6.3. Children under years is showing a 3D movie are allowed only with tickets.    <LineBreak />
+6.4. If You wear normal glasses, the 3D glasses can be worn over the glasses with diopters, catching the rim of 3D glasses for frame normal.    <LineBreak />
+6.5. To wear glasses is when the movie starts.    <LineBreak />
+6.6. To remove the glasses immediately after the end of the movie.    <LineBreak />
+    <LineBreak />
+7. Cinema administration has the right to:    <LineBreak />
+7.1. To establish the repertoire and ticket prices.    <LineBreak />
+7.2. To demand a document certifying the identity of the buyer, if the ticket is at a discounted rate, or there is a need to establish age of the buyer    <LineBreak />
+7.3. If you violate these Rules, accepted rules and norms of conduct (foul language, aggressive behaviour, breaking the silence in the room during a session, using items, creating noise and disturbing the audience, etc.) employees of the theater have the right to bring such a visitor out of the theater.    <LineBreak />
+    <LineBreak />
+                
+8.Information for people with disabilities.    <LineBreak />
+    <LineBreak />
+If You purchase a ticket for spectators with disabilities, please inform the cashier.     <LineBreak />
+To create a more comfortable environment for those with physical limitations, please inform about the upcoming visit to the our cinema Manager on duty from     <LineBreak />10:00 to 18:00 tel: + 994 (099) 906 66 44.
+
+                    </TextBlock>
+                </StackPanel>
+            </Viewbox>
+
+            <Canvas Width="1688">
+                <Image Source="\Images\sides.png" Height="190" Canvas.Left="73.6" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+                <endofpage:EndingUC x:Name="RulesEndingView" HorizontalAlignment="Left" Canvas.Left="105" VerticalAlignment="Center"/>
+                <Image Source="\Images\sides2.png" Height="190" Stretch="Fill" RenderTransformOrigin="0.5,0.5" Width="57" Canvas.Left="1369.3" HorizontalAlignment="Left" VerticalAlignment="Center">
+                    <Image.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform/>
+                            <SkewTransform AngleX="0.474"/>
+                            <RotateTransform Angle="180" />
+                            <TranslateTransform X="0.992"/>
+                        </TransformGroup>
+                    </Image.RenderTransform>
+                </Image>
+            </Canvas>
+        </StackPanel>
+    </ScrollViewer>
+</UserControl>

@@ -1,0 +1,216 @@
+﻿<UserControl x:Class="CinemaPlus.Views.UserControls.AdminSide.PurchasedTicketCellUC"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:CinemaPlus.Views.UserControls.AdminSide"
+             mc:Ignorable="d" 
+             Width="1300"
+             Height="300"
+             d:DesignHeight="300" 
+             d:DesignWidth="1300">
+    <Border BorderBrush="{StaticResource tenthColor}"
+            BorderThickness="2">
+        <Grid Background="{StaticResource firstColor}">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition Width="1.2*"></ColumnDefinition>
+                <ColumnDefinition Width="0.8*"></ColumnDefinition>
+                <ColumnDefinition Width="1.3*"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+
+            <!--Poster-->
+            <Grid Grid.Column="0">
+                <!--"{Binding Ticket.MoviePoster, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}-->
+                <Image Source="{Binding Ticket.MoviePoster, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
+                   Stretch="Fill" Margin="30,10,30,10">
+                </Image>
+            </Grid>
+
+            <!--Title-->
+            <Grid Grid.Column="1">
+
+                <TextBlock Style="{StaticResource MyTextBlockStyle2}"
+                Text="Title of Movie"
+                TextAlignment="Center"
+                FontSize="20" Width="240" Height="65"
+                Foreground="{StaticResource fifthColor}"
+                TextWrapping="Wrap" VerticalAlignment="Top" Margin="-30,10,0,0"/>
+
+                <TextBlock Style="{StaticResource MyTextBlockStyle2}"
+                       Text="{Binding Ticket.MovieTitle, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
+                       TextAlignment="Center"
+                       FontSize="20" Width="242" Height="71"
+                       TextWrapping="Wrap" Margin="-31,42,0,0" VerticalAlignment="Top"/>
+            </Grid>
+
+            <!--Cinema, Hall-->
+
+
+            <Grid Grid.Column="2">
+                <TextBlock Style="{StaticResource MyTextBlockStyle2}"
+                Text="Cinema"
+                TextAlignment="Center"
+                FontSize="20" Width="144" Height="64"
+                Foreground="{StaticResource fifthColor}"
+                TextWrapping="Wrap" VerticalAlignment="Top" Margin="-231,100,0,0" RenderTransformOrigin="0.576,0.438"/>
+                <TextBlock Style="{StaticResource MyTextBlockStyle2}"
+                       TextAlignment="Center"
+                       Text="{Binding Ticket.CinemaName, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
+                       FontSize="20" Width="320" Height="73"
+                       TextWrapping="Wrap" Margin="-319,130,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.516,1.341"/>
+
+                <TextBlock Style="{StaticResource MyTextBlockStyle2}"
+                Text="Hall"
+                TextAlignment="Center"
+                FontSize="20" Width="100" Height="65"
+                Foreground="{StaticResource fifthColor}"
+                TextWrapping="Wrap" VerticalAlignment="Top" Margin="-209,185,0,0" RenderTransformOrigin="-1.968,1.338"/>
+                <TextBlock Style="{StaticResource MyTextBlockStyle2}"
+                       Text="{Binding Ticket.HallName, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
+                       TextAlignment="Center"
+                       FontSize="20" Width="272" Height="84"
+                       TextWrapping="Wrap" Margin="-295,218,0,0" VerticalAlignment="Top"/>
+            </Grid>
+
+            <Border BorderBrush="{StaticResource tenthColor}"
+                    BorderThickness="0,0,2,0" Grid.Column="2" Margin="54,0,211,0" Grid.ColumnSpan="2"/>
+
+            <!--Date, Time-->
+            <Grid Grid.Column="3">
+                <TextBlock Style="{StaticResource MyTextBlockStyle2}"
+                Text="Date"
+                TextAlignment="Center"
+                FontSize="20" Width="144" Height="64"
+                Foreground="{StaticResource fifthColor}"
+                TextWrapping="Wrap" VerticalAlignment="Top" Margin="-335,10,0,0" RenderTransformOrigin="0.247,0.594"/>
+                <TextBlock Style="{StaticResource MyTextBlockStyle2}"
+                       TextAlignment="Center"
+                       Text="{Binding Ticket.Date, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
+                       FontSize="20" Width="191" Height="69"
+                       TextWrapping="Wrap" Margin="-360,42,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.516,1.341"/>
+
+                <TextBlock Style="{StaticResource MyTextBlockStyle2}"
+                Text="Time"
+                TextAlignment="Center"
+                FontSize="20" Width="144" Height="66"
+                Foreground="{StaticResource fifthColor}"
+                TextWrapping="Wrap" VerticalAlignment="Top" Margin="-335,100,0,0"/>
+                <TextBlock Style="{StaticResource MyTextBlockStyle2}"
+                       Text="{Binding Ticket.Time, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
+                       TextAlignment="Center"
+                       FontSize="20" Width="211" Height="68"
+                       TextWrapping="Wrap" Margin="-369,130,0,0" VerticalAlignment="Top"/>
+
+                <TextBlock Style="{StaticResource MyTextBlockStyle2}"
+                Text="Price"
+                TextAlignment="Center"
+                FontSize="20" Width="144" Height="66"
+                Foreground="{StaticResource fifthColor}"
+                TextWrapping="Wrap" VerticalAlignment="Top" Margin="-335,184,0,0" RenderTransformOrigin="-3.015,-0.515"/>
+                <TextBlock Style="{StaticResource MyTextBlockStyle2}"
+                Text="{Binding Ticket.Price, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
+                TextAlignment="Center"
+                FontSize="20" Width="164" Height="68"
+                TextWrapping="Wrap" Margin="-346,217,0,0" VerticalAlignment="Top"/>
+                <TextBlock Style="{StaticResource MyTextBlockStyle2}"
+                    Text="Row"
+                    TextAlignment="Center"
+                    FontSize="20" Width="144" Height="64"
+                    Foreground="{StaticResource fifthColor}"
+                    TextWrapping="Wrap" VerticalAlignment="Top" Margin="-174,10,0,0" RenderTransformOrigin="0.247,0.594"/>
+                <TextBlock Style="{StaticResource MyTextBlockStyle2}"
+                    Text="Seat"
+                    TextAlignment="Center"
+                    FontSize="20" Width="144" Height="64"
+                    Foreground="{StaticResource fifthColor}"
+                    TextWrapping="Wrap" VerticalAlignment="Top" Margin="-172,100,0,0" RenderTransformOrigin="0.247,0.594"/>
+                <TextBlock Style="{StaticResource MyTextBlockStyle2}"
+                    TextAlignment="Center"
+                    Text="{Binding Ticket.RowNo, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
+                    FontSize="20" Width="111" Height="69"
+                    TextWrapping="Wrap" Margin="-157,42,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.516,1.341"/>
+                <TextBlock Style="{StaticResource MyTextBlockStyle2}"
+                    TextAlignment="Center"
+                    Text="{Binding Ticket.SeatNo, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
+                    FontSize="20" Width="110" Height="69"
+                    TextWrapping="Wrap" Margin="-156,130,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.516,1.341"/>
+                <TextBlock Style="{StaticResource MyTextBlockStyle2}"
+                    Text="Purchase Date"
+                    TextAlignment="Center"
+                    FontSize="20" Width="173" Height="64"
+                    Foreground="{StaticResource fifthColor}"
+                    TextWrapping="Wrap" VerticalAlignment="Top" Margin="-185,188,0,0" RenderTransformOrigin="0.247,0.594"/>
+                <TextBlock Style="{StaticResource MyTextBlockStyle2}"
+                    TextAlignment="Center"
+                    Text="{Binding Ticket.PurchaseDate, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
+                    FontSize="20" Width="160" Height="69"
+                    TextWrapping="Wrap" Margin="-177,217,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.516,1.341"/>
+            </Grid>
+
+            <!--Customer Details-->
+            <Grid Grid.Column="4">
+
+                <TextBlock Style="{StaticResource MyTextBlockStyle2}"
+                Text="Email : "
+                TextAlignment="Center"
+                FontSize="20" Width="109" Height="50"
+                Foreground="{StaticResource fifthColor}"
+                TextWrapping="Wrap" VerticalAlignment="Top" Margin="-217,44,0,0"/>
+
+                <TextBlock Style="{StaticResource MyTextBlockStyle2}"
+                Text="Phone Number : "
+                TextAlignment="Center"
+                FontSize="20" Width="192" Height="50"
+                Foreground="{StaticResource fifthColor}"
+                TextWrapping="Wrap" VerticalAlignment="Top" Margin="-215,98,0,0"/>
+
+                <TextBlock Style="{StaticResource MyTextBlockStyle2}"
+                    Text="Payment : "
+                    TextAlignment="Center"
+                    FontSize="20" Width="171" Height="50"
+                    Foreground="{StaticResource fifthColor}"
+                    TextWrapping="Wrap" Margin="-233,152,0,0" VerticalAlignment="Top"/>
+
+                <TextBlock Style="{StaticResource MyTextBlockStyle2}"
+                Text="Card Number : "
+                TextAlignment="Center"
+                FontSize="20" Width="218" Height="50"
+                Foreground="{StaticResource fifthColor}"
+                TextWrapping="Wrap" Margin="-234,206,0,0" VerticalAlignment="Top"/>
+
+                <TextBlock Style="{StaticResource MyTextBlockStyle2}"
+                Text="Customer Details"
+                TextAlignment="Center"
+                FontSize="20" Width="245" Height="50"
+                Foreground="{StaticResource fifthColor}"
+                TextWrapping="Wrap" VerticalAlignment="Top" Margin="-56,0,0,0"/>
+
+                <TextBlock Style="{StaticResource MyTextBlockStyle2}"
+                TextAlignment="Left"
+                Text="{Binding Ticket.PhoneNumber, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
+                FontSize="20" Width="389" Height="50"
+                TextWrapping="Wrap" Margin="-44,98,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.516,1.341"/>
+
+                <TextBlock Style="{StaticResource MyTextBlockStyle2}"
+                TextAlignment="Left"
+                Text="{Binding Ticket.CardNumber, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
+                FontSize="20" Width="389" Height="50"
+                TextWrapping="Wrap" Margin="-56,206,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.516,1.341"/>
+
+                <TextBlock Style="{StaticResource MyTextBlockStyle2}"
+                TextAlignment="Left"
+                Text="{Binding Ticket.Payment, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
+                FontSize="20" Width="389" Height="50"
+                TextWrapping="Wrap" Margin="-100,154,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.516,1.341"/>
+
+                <TextBlock Style="{StaticResource MyTextBlockStyle2}"
+                TextAlignment="Left"
+                Text="{Binding Ticket.Email, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
+                FontSize="20" Width="389" Height="50"
+                TextWrapping="Wrap" Margin="-131,44,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.516,1.341"/>
+            </Grid>
+        </Grid>
+    </Border>
+</UserControl>
