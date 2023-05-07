@@ -1,3 +1,5 @@
-2022/11/12-13:24:45.049 1020 Reusing MANIFEST C:\Users\Hafiz\source\repos\CinemaPlus\CinemaPlus\bin\Debug\CinemaPlus.exe.WebView2\EBWebView\Default\Site Characteristics Database/MANIFEST-000001
-2022/11/12-13:24:45.049 1020 Recovering log #3
-2022/11/12-13:24:45.050 1020 Reusing old log C:\Users\Hafiz\source\repos\CinemaPlus\CinemaPlus\bin\Debug\CinemaPlus.exe.WebView2\EBWebView\Default\Site Characteristics Database/000003.log 
+2023/05/07-20:21:08.577 2f10 Log #3: 66 ops saved to Table #4 OK
+2023/05/07-20:21:08.580 2f10 Archiving C:\Users\Hafiz\Source\Repos\CinemaKhan\CinemaPlus\bin\Debug\CinemaPlus.exe.WebView2\EBWebView\Default\Site Characteristics Database/000003.log: OK
+2023/05/07-20:21:08.580 2f10 Table #4: 66 entries OK
+2023/05/07-20:21:08.583 2f10 Archiving C:\Users\Hafiz\Source\Repos\CinemaKhan\CinemaPlus\bin\Debug\CinemaPlus.exe.WebView2\EBWebView\Default\Site Characteristics Database/MANIFEST-000001: OK
+2023/05/07-20:21:08.591 2f10 **** Repaired leveldb C:\Users\Hafiz\Source\Repos\CinemaKhan\CinemaPlus\bin\Debug\CinemaPlus.exe.WebView2\EBWebView\Default\Site Characteristics Database; recovered 1 files; 1618 bytes. Some data may have been lost. ****

@@ -34,7 +34,7 @@ namespace CinemaPlus.ViewModels.WindowsViewModel
         {
             Helper.InitializeCinemas();
 
-            var WeAreBackView = new WeAreBackUC();
+                var WeAreBackView = new WeAreBackUC();
             var EndingView = new EndingUC();
             var endingViewModel = new EndingUCViewModel();
             EndingView.DataContext = endingViewModel;

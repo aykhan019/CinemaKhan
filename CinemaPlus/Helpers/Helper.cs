@@ -457,7 +457,7 @@ namespace CinemaPlus.Helpers
 
         public static void ReadMoviesFromFiles()
         {
-            var date = DateTime.Today;
+            var date = new DateTime(2022, 11, 12);
             List<Movie> movies = new List<Movie>();
             foreach (var cinema in App.Cinemas)
             {
@@ -477,6 +477,7 @@ namespace CinemaPlus.Helpers
             }
             App.AllMoviesFromAllHalls = movies;
             movies = movies.Distinct(new MovieTitleComparer()).ToList();
+            
             App.Movies = SortMoviesAsIWant(movies);
         }
 

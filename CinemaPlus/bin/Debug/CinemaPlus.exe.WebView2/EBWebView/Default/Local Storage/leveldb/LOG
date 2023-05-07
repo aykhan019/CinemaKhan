@@ -1,3 +1,2 @@
-2022/11/12-13:32:52.310 2370 Reusing MANIFEST C:\Users\Hafiz\source\repos\CinemaPlus\CinemaPlus\bin\Debug\CinemaPlus.exe.WebView2\EBWebView\Default\Local Storage\leveldb/MANIFEST-000001
-2022/11/12-13:32:52.311 2370 Recovering log #4
-2022/11/12-13:32:52.312 2370 Reusing old log C:\Users\Hafiz\source\repos\CinemaPlus\CinemaPlus\bin\Debug\CinemaPlus.exe.WebView2\EBWebView\Default\Local Storage\leveldb/000004.log 
+2023/05/07-20:21:08.687 554c Creating DB C:\Users\Hafiz\Source\Repos\CinemaKhan\CinemaPlus\bin\Debug\CinemaPlus.exe.WebView2\EBWebView\Default\Local Storage\leveldb since it was missing.
+2023/05/07-20:21:08.701 554c Reusing MANIFEST C:\Users\Hafiz\Source\Repos\CinemaKhan\CinemaPlus\bin\Debug\CinemaPlus.exe.WebView2\EBWebView\Default\Local Storage\leveldb/MANIFEST-000001
