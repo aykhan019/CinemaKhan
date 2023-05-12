@@ -22,6 +22,7 @@ namespace CinemaPlus.ViewModels.EndingViewModels
         public RelayCommand TariffsCommand { get; set; }
         public RelayCommand CineBonusCommand { get; set; }
         public RelayCommand AdminSideCommand { get; set; }
+        public RelayCommand MyWebSiteCommand { get; set; }
 
         public AdminSignInUC AdminSignInView { get; set; } = new AdminSignInUC();
         public AdminSignInUCViewModel AdminSignInViewModel { get; set; } = new AdminSignInUCViewModel();
@@ -142,6 +143,16 @@ namespace CinemaPlus.ViewModels.EndingViewModels
             VipClubCommand = new RelayCommand((f) =>
             {
                 var destinationurl = "https://vipclubazerbaijan.com/";
+                var sInfo = new System.Diagnostics.ProcessStartInfo(destinationurl)
+                {
+                    UseShellExecute = true,
+                };
+                System.Diagnostics.Process.Start(sInfo);
+            });
+
+            MyWebSiteCommand = new RelayCommand((m) =>
+            {
+                var destinationurl = "https://aykhan.net";
                 var sInfo = new System.Diagnostics.ProcessStartInfo(destinationurl)
                 {
                     UseShellExecute = true,

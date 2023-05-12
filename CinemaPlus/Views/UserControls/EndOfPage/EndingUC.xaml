@@ -7,7 +7,7 @@
              mc:Ignorable="d" 
              d:DesignHeight="190"
              d:DesignWidth="1300"
-             Height="190"
+             Height="210"
              Width="1275">
     <Grid>
         <Grid.Background>
@@ -296,14 +296,14 @@
                    HorizontalAlignment="Left"
                    VerticalAlignment="Top"
                    Margin="204,34,0,0" 
-                   Width="325" 
+                   Width="Auto" 
                    Cursor="Hand"
                    Height="35"
                    RenderTransformOrigin="0.516,-0.143">
                 <Label.InputBindings>
                     <MouseBinding Gesture="LeftClick" Command="{Binding SiteCommand}"/>
                 </Label.InputBindings>
-                <TextBlock Text="Saytın tam versiyası"
+                <TextBlock Text="Full version of the site"
                            Foreground="White">
                      <Hyperlink NavigateUri="http://www.google.com"></Hyperlink>
                     <TextBlock.Style>
@@ -321,9 +321,38 @@
                 </TextBlock>
             </Label>
 
-            <Image Source="/Images/vipclub.png"
-                   Height="60" 
-                   Margin="903,8,177,47"
+            <Label Style="{StaticResource MyLabelStyle}"
+                   HorizontalAlignment="Left"
+                   VerticalAlignment="Top"
+                   Margin="204,58,0,0" 
+                   Width="Auto" 
+                   Cursor="Hand"
+                   Height="35"
+                   RenderTransformOrigin="0.516,-0.143">
+                <Label.InputBindings>
+                    <MouseBinding Gesture="LeftClick" Command="{Binding MyWebSiteCommand}"/>
+                </Label.InputBindings>
+                <TextBlock Text="Visit my website"
+                           Foreground="White">
+                     <Hyperlink NavigateUri="http://www.google.com"></Hyperlink>
+                    <TextBlock.Style>
+                        <Style TargetType="TextBlock">
+                            <Style.Triggers>
+                                <Trigger Property ="IsMouseOver" Value="True">
+                                    <Setter Property= "TextDecorations" Value="None"/>
+                                </Trigger>
+                                <Trigger Property ="IsMouseOver" Value="False">
+                                    <Setter Property= "TextDecorations" Value="Underline"/>
+                                </Trigger>
+                            </Style.Triggers>
+                        </Style>
+                    </TextBlock.Style>
+                </TextBlock>
+            </Label>
+
+            <Image Source="/Images/vipclub.png" 
+                   Panel.ZIndex="1"
+                   Margin="899,23,181,35"
                    Cursor="Hand">
                 <Image.InputBindings>
                     <MouseBinding Gesture="LeftClick" Command="{Binding VipClubCommand}"></MouseBinding>
