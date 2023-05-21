@@ -1,3 +1,1 @@
-# CinemaKhan
-- WPF Exam Project - Cinema Management System
-https://www.youtube.com/watch?v=mRzTegj3Mqg&t=39s
+<iframe width="560" height="315" src="https://www.youtube.com/embed/mRzTegj3Mqg?start=6" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
