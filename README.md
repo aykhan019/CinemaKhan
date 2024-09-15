@@ -38,7 +38,7 @@ To set up the project locally, follow these steps:
 
 For a complete walkthrough of the CinemaKhan application in action, watch the demo video here:
 
-<a href="https://www.youtube.com/watch?v=mRzTegj3Mqg&ab_channel=MyProjects">
+<a href="https://www.youtube.com/watch?v=mRzTegj3Mqg">
   <img src="https://media.aykhan.net/thumbnails/projects/wpf.jpg" alt="Watch Demo Video" width="100%"/>
 </a>
 
